@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Base Invaders · Slo-Pitch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Saira:wght@400;500;600;700&family=Spline+Sans+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0b0f1e; --panel:#141b30; --panel2:#1b2540; --line:rgba(255,255,255,.08); --line2:rgba(255,255,255,.14);
+    --navy:#1B3A6B; --blue:#4f8be0; --gold:#f5c518; --gold-dim:#b9930c;
+    --win:#34d77f; --loss:#ef5d6b; --tie:#9aa3b8;
+    --text:#eef1f7; --muted:#8b93a7; --dim:#5a6178;
+    --pixel:'Press Start 2P',monospace; --mono:'Spline Sans Mono',monospace; --sans:'Saira',sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:1.5;
+    background-image:radial-gradient(circle at 50% -8%, rgba(245,197,24,.07), transparent 45%);}
+  .wrap{max-width:760px;margin:0 auto;padding:0 16px 64px}
+  a{color:var(--blue);text-decoration:none}
+
+  .eyebrow{font-family:var(--pixel);font-size:9px;letter-spacing:1px;color:var(--gold);text-transform:uppercase}
+  .num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+
+  /* HERO */
+  .hero{position:relative;text-align:center;padding:36px 16px 26px;overflow:hidden;
+    border-bottom:1px solid var(--line)}
+  .hero::after{content:"";position:absolute;inset:0;pointer-events:none;
+    background:repeating-linear-gradient(rgba(0,0,0,0) 0 2px, rgba(0,0,0,.10) 2px 3px)}
+  .hero>*{position:relative;z-index:1}
+  .invader{display:block;margin:0 auto 14px}
+  .teamname{font-family:var(--pixel);font-size:clamp(20px,6.4vw,40px);line-height:1.25;color:var(--text);
+    text-shadow:3px 3px 0 var(--navy)}
+  .teamname b{color:var(--gold);text-shadow:3px 3px 0 #5a4a06}
+  .sub{font-family:var(--pixel);font-size:8px;letter-spacing:1px;color:var(--muted);margin-top:14px}
+
+  .scoreboard{display:flex;align-items:stretch;justify-content:center;gap:10px;margin:26px auto 6px;flex-wrap:wrap}
+  .sb-card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 18px;min-width:96px}
+  .sb-card .label{font-size:11px;letter-spacing:.5px;text-transform:uppercase;color:var(--muted)}
+  .sb-card .val{font-family:var(--mono);font-weight:700;font-size:30px;color:var(--text);margin-top:2px}
+  .sb-card.rank .val{color:var(--gold)}
+  .sb-card .val small{font-size:14px;color:var(--muted);font-weight:500}
+
+  .nextgame{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;
+    background:var(--panel2);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:0 8px 8px 0;
+    padding:12px 16px;margin:18px auto 0;max-width:560px;text-align:left}
+  .nextgame .tag{font-family:var(--pixel);font-size:8px;color:var(--gold);letter-spacing:1px}
+  .nextgame .matchup{font-size:18px;font-weight:600}
+  .nextgame .det{font-size:13px;color:var(--muted)}
+  .nextgame .det .num{color:var(--text)}
+
+  .marchers{display:flex;gap:14px;justify-content:center;margin:24px 0 8px;opacity:.5}
+
+  /* SECTIONS */
+  section{margin-top:34px}
+  .sec-head{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+  .sec-head h2{font-family:var(--pixel);font-size:12px;letter-spacing:1px;color:var(--text);text-transform:uppercase;font-weight:400}
+  .panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+
+  /* TABLES */
+  table{width:100%;border-collapse:collapse}
+  .scroll{overflow-x:auto}
+  th{font-size:10px;letter-spacing:.5px;text-transform:uppercase;color:var(--muted);font-weight:600;
+    text-align:right;padding:10px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
+  th:first-child,td:first-child{text-align:center}
+  th.l,td.l{text-align:left}
+  td{padding:9px 10px;font-size:13px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
+  tr:last-child td{border-bottom:none}
+  .tnum{font-family:var(--mono);font-variant-numeric:tabular-nums}
+  .rk{color:var(--dim);font-family:var(--mono);width:30px}
+  tr.me td{background:rgba(245,197,24,.10)}
+  tr.me td:first-child{box-shadow:inset 3px 0 0 var(--gold)}
+  tr.me td.l{color:var(--gold);font-weight:600}
+  .pos{color:var(--win)} .neg{color:var(--loss)}
+  .strk-w{color:var(--win)} .strk-l{color:var(--loss)} .strk-t{color:var(--tie)}
+
+  /* RESULTS + SCHEDULE */
+  .games{display:flex;flex-direction:column}
+  .game{display:flex;align-items:center;gap:12px;padding:11px 14px;border-bottom:1px solid var(--line)}
+  .game:last-child{border-bottom:none}
+  .game .date{font-family:var(--mono);font-size:12px;color:var(--muted);width:54px;flex:none}
+  .game .opp{flex:1;font-size:14px;font-weight:500}
+  .game .opp .ha{color:var(--dim);font-weight:400;margin-right:4px}
+  .game .score{font-family:var(--mono);font-weight:600;font-size:15px;width:64px;text-align:right}
+  .badge{font-family:var(--pixel);font-size:8px;padding:4px 6px;border-radius:4px;width:24px;text-align:center;flex:none}
+  .b-w{background:rgba(52,215,127,.16);color:var(--win)}
+  .b-l{background:rgba(239,93,107,.16);color:var(--loss)}
+  .b-t{background:rgba(154,163,184,.16);color:var(--tie)}
+  .upcoming .game .opp{font-weight:500}
+  .upcoming .when{font-family:var(--mono);font-size:12px;color:var(--muted);flex:none}
+
+  /* LEADERS */
+  .leaders{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:12px}
+  .lead{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+  .lead h3{font-size:11px;letter-spacing:.5px;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:10px}
+  .lead ol{list-style:none}
+  .lead li{display:flex;align-items:baseline;gap:8px;padding:5px 0;font-size:14px}
+  .lead li .p{font-family:var(--mono);color:var(--dim);font-size:12px;width:14px}
+  .lead li .nm{flex:1}
+  .lead li .v{font-family:var(--mono);font-weight:600}
+  .lead li:first-child .p{color:var(--gold)}
+  .lead li:first-child .nm{color:var(--gold);font-weight:600}
+
+  .foot{margin-top:40px;text-align:center;font-size:12px;color:var(--dim);line-height:1.9}
+  .foot .eyebrow{display:block;margin-bottom:6px}
+  .cta{display:inline-block;margin-top:6px;background:var(--navy);color:#fff;font-weight:600;font-size:13px;
+    padding:9px 18px;border-radius:6px}
+  @media (prefers-reduced-motion:no-preference){
+    .live{animation:blink 1.4s steps(1) infinite}
+    @keyframes blink{50%{opacity:.25}}
+  }
+  @media (max-width:540px){
+    .sb-card{padding:12px 14px;min-width:84px}
+    .sb-card .val{font-size:26px}
+    .game .date{width:48px}
+  }
+</style>
+</head>
+<body>
+<div class="hero">
+  <svg class="invader" id="bigInvader" width="72" height="52" aria-label="Base Invaders"></svg>
+  <div class="teamname">BASE&nbsp;<b>INVADERS</b></div>
+  <div class="sub">NorthShore Slo-Pitch · Thunder Bay</div>
+
+  <div class="scoreboard" id="scoreboard"></div>
+  <div class="nextgame" id="nextgame" hidden></div>
+  <div class="marchers" id="marchers"></div>
+</div>
+
+<div class="wrap">
+  <section id="leadersSec">
+    <div class="sec-head"><h2>Leaders</h2></div>
+    <div class="leaders" id="leaders"></div>
+  </section>
+
+  <section id="rosterSec">
+    <div class="sec-head"><h2>Batting</h2></div>
+    <div class="panel scroll"><table id="roster"></table></div>
+    <p style="text-align:center;margin-top:14px;" id="sheetBtn"></p>
+  </section>
+
+  <section id="resultsSec">
+    <div class="sec-head"><h2>Results</h2></div>
+    <div class="panel"><div class="games" id="results"></div></div>
+  </section>
+
+  <section id="scheduleSec">
+    <div class="sec-head"><h2>Up Next</h2></div>
+    <div class="panel"><div class="games upcoming" id="schedule"></div></div>
+  </section>
+
+  <section id="standingsSec">
+    <div class="sec-head"><h2>Standings</h2></div>
+    <div class="panel scroll"><table id="standings"></table></div>
+  </section>
+
+  <div class="foot" id="foot"></div>
+</div>
+
+<script>
+/* ---- Baked fallback so the page renders anywhere (Netlify serves the live data.json) ---- */
+const FALLBACK = {
+  "team":"Base Invaders","updated":"Jun 9, 2026",
+  "leagueUrl":"https://northshoreunlimited.ca/standings/",
+  "sheetUrl":"https://docs.google.com/spreadsheets/d/1GYBt5mEGkC8YAokzqvHLtemRHdrC714m1gaIqc4OXA4/edit",
+  "record":{"w":3,"l":1,"t":0,"winPct":0.750},
+  "standing":{"rank":7,"totalTeams":24,"diff":27,"last4":"W-W-W-L","streak":"L1"},
+  "teamBatting":{"avg":0.635,"ops":1.462,"hr":2,"runs":92},
+  "nextGame":{"date":"Tue, Jun 9","time":"6:00 PM","opponent":"Hitters","home":true,"park":"Delaney North"},
+  "results":[
+    {"date":"May 26","opp":"Dusty Gloves","home":true,"us":26,"them":0,"res":"W"},
+    {"date":"May 27","opp":"Bat Intentions","home":false,"us":42,"them":31,"res":"W"},
+    {"date":"Jun 1","opp":"Saved by the Balls","home":true,"us":14,"them":12,"res":"W"},
+    {"date":"Jun 2","opp":"Benchwarmers","home":false,"us":10,"them":22,"res":"L"}
+  ],
+  "schedule":[
+    {"date":"Jun 9","opp":"Hitters","home":true},{"date":"Jun 11","opp":"Bandits","home":false},
+    {"date":"Jun 15","opp":"RCG Rockies","home":false},{"date":"Jun 18","opp":"Giants","home":true},
+    {"date":"Jun 22","opp":"Halfcut","home":true},{"date":"Jun 30","opp":"Stanley Slammers","home":true},
+    {"date":"Jul 1","opp":"Marinaders","home":false},{"date":"Jul 7","opp":"Walk off Warriors","home":false},
+    {"date":"Jul 9","opp":"Originals","home":true},{"date":"Jul 14","opp":"Expos","home":true},
+    {"date":"Jul 20","opp":"Chickadees","home":false},{"date":"Jul 14","opp":"The Drivers","home":false},
+    {"date":"Jul 28","opp":"Bad Knees Bears","home":true},{"date":"Jul 29","opp":"Hitmen","home":true},
+    {"date":"Aug 4","opp":"Fiery Beavers","home":false},{"date":"Aug 5","opp":"Franki's","home":false},
+    {"date":"Aug 11","opp":"The Splinters","home":false},{"date":"Aug 13","opp":"Balls & Dolls","home":true},
+    {"date":"Aug 18","opp":"Bases Loaded","home":true}
+  ],
+  "standingsTable":[
+    {"rank":1,"team":"Bases Loaded","w":4,"l":0,"t":0,"diff":79,"strk":"W4"},
+    {"rank":2,"team":"Walk off Warriors","w":4,"l":0,"t":0,"diff":70,"strk":"W4"},
+    {"rank":3,"team":"Halfcut","w":3,"l":0,"t":0,"diff":62,"strk":"W3"},
+    {"rank":4,"team":"Expos","w":2,"l":0,"t":0,"diff":22,"strk":"W2"},
+    {"rank":5,"team":"Franki's","w":3,"l":0,"t":1,"diff":55,"strk":"W2"},
+    {"rank":6,"team":"Benchwarmers","w":2,"l":0,"t":1,"diff":30,"strk":"W1"},
+    {"rank":7,"team":"Base Invaders","w":3,"l":1,"t":0,"diff":27,"strk":"L1"},
+    {"rank":8,"team":"Bat Intentions","w":3,"l":1,"t":0,"diff":13,"strk":"W2"},
+    {"rank":9,"team":"Chickadees","w":2,"l":1,"t":0,"diff":24,"strk":"L1"},
+    {"rank":10,"team":"Giants","w":2,"l":2,"t":0,"diff":22,"strk":"W1"},
+    {"rank":11,"team":"Hitmen","w":2,"l":2,"t":0,"diff":3,"strk":"W1"},
+    {"rank":12,"team":"Balls & Dolls","w":2,"l":2,"t":0,"diff":2,"strk":"W1"},
+    {"rank":13,"team":"Saved by the Balls","w":2,"l":2,"t":0,"diff":-11,"strk":"W1"},
+    {"rank":14,"team":"RCG Rockies","w":2,"l":2,"t":0,"diff":-21,"strk":"L1"},
+    {"rank":15,"team":"Marinaders","w":1,"l":2,"t":0,"diff":24,"strk":"W1"},
+    {"rank":16,"team":"Dusty Gloves","w":1,"l":2,"t":0,"diff":-25,"strk":"L1"},
+    {"rank":17,"team":"Originals","w":1,"l":3,"t":0,"diff":-2,"strk":"L3"},
+    {"rank":18,"team":"The Splinters","w":1,"l":3,"t":0,"diff":-37,"strk":"L2"},
+    {"rank":19,"team":"Stanley Slammers","w":1,"l":3,"t":0,"diff":-49,"strk":"W1"},
+    {"rank":20,"team":"Bandits","w":1,"l":3,"t":0,"diff":-64,"strk":"L2"},
+    {"rank":21,"team":"Bad Knees Bears","w":0,"l":2,"t":0,"diff":-27,"strk":"L2"},
+    {"rank":22,"team":"The Drivers","w":0,"l":3,"t":0,"diff":-58,"strk":"L3"},
+    {"rank":23,"team":"Hitters","w":0,"l":4,"t":0,"diff":-68,"strk":"L4"},
+    {"rank":24,"team":"Fiery Beavers","w":0,"l":4,"t":0,"diff":-71,"strk":"L4"}
+  ],
+  "leaders":{
+    "AVG":[["Melvin",".1000"],["Jason",".875"],["Greg",".846"],["Mark",".800"],["Erik",".778"]],
+    "OPS":[["Melvin","2.333"],["Jason","2.132"],["Erik","1.976"],["Brandon","1.929"],["Greg","1.875"]],
+    "RBI":[["Erik","14"],["Jason","11"],["Alex","10"],["Keith","8"],["Mark","7"]],
+    "Hits":[["Jason","14"],["Erik","14"],["Brandon","13"],["Alex","13"],["Brendan","13"]]
+  },
+  "players":[
+    {"name":"Melvin","gp":1,"ab":3,"h":3,"hr":0,"rbi":1,"r":3,"avg":1.000,"ops":2.333},
+    {"name":"Jason","gp":4,"ab":16,"h":14,"hr":0,"rbi":11,"r":10,"avg":0.875,"ops":2.132},
+    {"name":"Erik","gp":4,"ab":18,"h":14,"hr":1,"rbi":14,"r":15,"avg":0.778,"ops":1.976},
+    {"name":"Brandon","gp":4,"ab":18,"h":13,"hr":0,"rbi":5,"r":13,"avg":0.722,"ops":1.929},
+    {"name":"Greg","gp":4,"ab":13,"h":11,"hr":0,"rbi":5,"r":7,"avg":0.846,"ops":1.875},
+    {"name":"Mark","gp":2,"ab":10,"h":8,"hr":0,"rbi":7,"r":4,"avg":0.800,"ops":1.718},
+    {"name":"Keith","gp":2,"ab":7,"h":5,"hr":0,"rbi":8,"r":3,"avg":0.714,"ops":1.635},
+    {"name":"Brendan","gp":4,"ab":19,"h":13,"hr":1,"rbi":7,"r":9,"avg":0.684,"ops":1.632},
+    {"name":"Sam","gp":2,"ab":9,"h":6,"hr":0,"rbi":1,"r":3,"avg":0.667,"ops":1.589},
+    {"name":"Dallas","gp":1,"ab":3,"h":2,"hr":0,"rbi":0,"r":2,"avg":0.667,"ops":1.333},
+    {"name":"Diana","gp":1,"ab":5,"h":3,"hr":0,"rbi":1,"r":1,"avg":0.600,"ops":1.200},
+    {"name":"Alex","gp":4,"ab":19,"h":13,"hr":0,"rbi":10,"r":8,"avg":0.684,"ops":1.160},
+    {"name":"Vee","gp":1,"ab":3,"h":1,"hr":0,"rbi":0,"r":2,"avg":0.333,"ops":1.048},
+    {"name":"Scotty","gp":2,"ab":10,"h":3,"hr":0,"rbi":2,"r":3,"avg":0.300,"ops":0.862},
+    {"name":"Julie","gp":4,"ab":20,"h":8,"hr":0,"rbi":5,"r":8,"avg":0.400,"ops":0.829},
+    {"name":"Sean","gp":2,"ab":8,"h":4,"hr":0,"rbi":2,"r":1,"avg":0.500,"ops":0.806},
+    {"name":"Brooklyn","gp":1,"ab":5,"h":1,"hr":0,"rbi":0,"r":1,"avg":0.200,"ops":0.600},
+    {"name":"Alexander","gp":1,"ab":3,"h":0,"hr":0,"rbi":1,"r":0,"avg":null,"ops":null},
+    {"name":"Jordan","gp":2,"ab":3,"h":0,"hr":0,"rbi":0,"r":0,"avg":null,"ops":null}
+  ]
+};
+
+/* classic invader bitmap → SVG */
+const SPRITE=["00100000100","00010001000","00111111100","01101110110","11111111111","10111111101","10100000101","00011011000"];
+function invaderSVG(el,color,cell){
+  const cols=SPRITE[0].length, rows=SPRITE.length;
+  el.setAttribute("viewBox",`0 0 ${cols*cell} ${rows*cell}`);
+  let r="";
+  for(let y=0;y<rows;y++)for(let x=0;x<cols;x++) if(SPRITE[y][x]==="1")
+    r+=`<rect x="${x*cell}" y="${y*cell}" width="${cell}" height="${cell}" fill="${color}"/>`;
+  el.innerHTML=r;
+}
+function miniInvader(color){
+  const c=2,cols=SPRITE[0].length,rows=SPRITE.length;
+  let r="";for(let y=0;y<rows;y++)for(let x=0;x<cols;x++) if(SPRITE[y][x]==="1")
+    r+=`<rect x="${x*c}" y="${y*c}" width="${c}" height="${c}" fill="${color}"/>`;
+  return `<svg width="22" height="16" viewBox="0 0 ${cols*c} ${rows*c}">${r}</svg>`;
+}
+
+const esc=s=>String(s).replace(/[&<>]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[m]));
+const fmt3=n=>n==null?"—":n.toFixed(3).replace(/^0/,"");
+const fmtAvg=n=>n==null?"—":n.toFixed(3).replace(/^0/,"");
+const strkClass=s=>!s||s==="—"?"strk-t":s[0]==="W"?"strk-w":s[0]==="L"?"strk-l":"strk-t";
+const ha=h=>h?'<span class="ha">vs</span>':'<span class="ha">@</span>';
+
+function render(D){
+  invaderSVG(document.getElementById("bigInvader"),"#f5c518",6);
+  document.getElementById("marchers").innerHTML =
+    [..."0000"].map(()=>miniInvader("#3a4a6b")).join("");
+
+  const rec=D.record, st=D.standing;
+  document.getElementById("scoreboard").innerHTML=`
+    <div class="sb-card"><div class="label">Record</div><div class="val">${rec.w}<small>–</small>${rec.l}${rec.t?`<small>–</small>${rec.t}`:""}</div></div>
+    <div class="sb-card"><div class="label">Win %</div><div class="val">${Math.round(rec.winPct*1000)/10}<small>%</small></div></div>
+    <div class="sb-card rank"><div class="label">League</div><div class="val">#${st.rank}<small> / ${st.totalTeams}</small></div></div>`;
+
+  const ng=D.nextGame, ngEl=document.getElementById("nextgame");
+  if(ng){ ngEl.hidden=false; ngEl.innerHTML=`
+    <span class="tag">NEXT ▸</span>
+    <span class="matchup">${ha(ng.home)} ${esc(ng.opponent)}</span>
+    <span class="det"><span class="num">${esc(ng.date)}</span>${ng.time?` · <span class="num">${esc(ng.time)}</span>`:""}${ng.park?` · ${esc(ng.park)}`:""}</span>`; }
+
+  /* standings */
+  let s=`<thead><tr><th>#</th><th class="l">Team</th><th>W-L-T</th><th>Diff</th><th>Strk</th></tr></thead><tbody>`;
+  D.standingsTable.forEach(t=>{
+    const me=t.team===D.team?" class=\"me\"":"";
+    const d=(t.diff>0?"+":"")+t.diff;
+    s+=`<tr${me}><td class="rk">${t.rank}</td><td class="l">${esc(t.team)}</td>`+
+       `<td class="tnum">${t.w}-${t.l}-${t.t}</td>`+
+       `<td class="tnum ${t.diff>0?"pos":t.diff<0?"neg":""}">${d}</td>`+
+       `<td class="tnum ${strkClass(t.strk)}">${t.strk}</td></tr>`;
+  });
+  document.getElementById("standings").innerHTML=s+"</tbody>";
+
+  /* results (most recent first) */
+  document.getElementById("results").innerHTML=[...D.results].reverse().map(g=>{
+    const b=g.res==="W"?"b-w":g.res==="L"?"b-l":"b-t";
+    return `<div class="game"><span class="date">${esc(g.date)}</span>`+
+      `<span class="opp">${ha(g.home)} ${esc(g.opp)}</span>`+
+      `<span class="score">${g.us}–${g.them}</span>`+
+      `<span class="badge ${b}">${g.res}</span></div>`;
+  }).join("")||`<div class="game"><span class="opp" style="color:var(--muted)">No games played yet.</span></div>`;
+
+  /* schedule */
+  document.getElementById("schedule").innerHTML=D.schedule.map(g=>
+    `<div class="game"><span class="date">${esc(g.date)}</span>`+
+    `<span class="opp">${ha(g.home)} ${esc(g.opp)}</span>`+
+    `<span class="when">${g.home?"Home":"Away"}</span></div>`).join("");
+
+  /* leaders */
+  document.getElementById("leaders").innerHTML=Object.entries(D.leaders).map(([cat,rows])=>
+    `<div class="lead"><h3>${esc(cat)}</h3><ol>`+
+    rows.map((r,i)=>`<li><span class="p">${i+1}</span><span class="nm">${esc(r[0])}</span><span class="v">${esc(r[1])}</span></li>`).join("")+
+    `</ol></div>`).join("");
+
+  /* roster — sorted by OPS desc, unplayed/dash last */
+  const ps=[...D.players].sort((a,b)=>(b.ops??-1)-(a.ops??-1));
+  let r=`<thead><tr><th class="l">Player</th><th>GP</th><th>AB</th><th>H</th><th>HR</th><th>RBI</th><th>R</th><th>AVG</th><th>OPS</th></tr></thead><tbody>`;
+  ps.forEach(p=>{
+    r+=`<tr><td class="l">${esc(p.name)}</td><td class="tnum">${p.gp}</td><td class="tnum">${p.ab}</td>`+
+       `<td class="tnum">${p.h}</td><td class="tnum">${p.hr}</td><td class="tnum">${p.rbi}</td><td class="tnum">${p.r}</td>`+
+       `<td class="tnum">${fmtAvg(p.avg)}</td><td class="tnum">${p.ops==null?"—":p.ops.toFixed(3)}</td></tr>`;
+  });
+  document.getElementById("roster").innerHTML=r+"</tbody>";
+  const sb=document.getElementById("sheetBtn");
+  if(sb) sb.innerHTML=D.sheetUrl?`<a class="cta" href="${esc(D.sheetUrl)}">View Full Stats Sheet</a>`:"";
+
+  document.getElementById("foot").innerHTML=
+    `<span class="eyebrow live">▸ updated ${esc(D.updated||"")}</span>`+
+    `Standings & schedule auto-synced from <a href="${esc(D.leagueUrl||"#")}">NorthShore Unlimited</a>.`+
+    (D.sheetUrl?`<br><a class="cta" href="${esc(D.sheetUrl)}">View Full Stats Sheet</a>`:"");
+}
+
+/* render fallback immediately, then override with live data.json if present */
+render(FALLBACK);
+fetch("data.json",{cache:"no-store"}).then(r=>r.ok?r.json():null).then(d=>{if(d)render(d);}).catch(()=>{});
+</script>
+</body>
+</html>
