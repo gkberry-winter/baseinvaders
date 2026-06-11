@@ -112,6 +112,65 @@
     .live{animation:blink 1.4s steps(1) infinite}
     @keyframes blink{50%{opacity:.25}}
   }
+  /* TEAM BATTING STRIP */
+  .statstrip{display:flex;justify-content:center;flex-wrap:wrap;margin:12px auto 0;max-width:560px;
+    background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+  .statstrip .s{flex:1;min-width:78px;padding:10px 8px;text-align:center;border-right:1px solid var(--line)}
+  .statstrip .s:last-child{border-right:none}
+  .statstrip .s .k{font-size:10px;letter-spacing:.5px;text-transform:uppercase;color:var(--muted)}
+  .statstrip .s .v{font-family:var(--mono);font-weight:700;font-size:20px;color:var(--text);margin-top:3px}
+  .statstrip .s.gold .v{color:var(--gold)}
+
+  /* FORM BAR */
+  .formbar{display:flex;gap:5px;justify-content:center;align-items:center;margin:16px auto 0;flex-wrap:wrap}
+  .formbar .fb-lab{font-family:var(--pixel);font-size:8px;color:var(--muted);letter-spacing:1px;margin-right:4px}
+  .formbar .pip{width:22px;height:22px;border-radius:4px;display:flex;align-items:center;justify-content:center;
+    font-family:var(--pixel);font-size:8px;color:#0b0f1e}
+  .formbar .pip.w{background:var(--win)} .formbar .pip.l{background:var(--loss)} .formbar .pip.t{background:var(--tie)}
+  .formbar .pip.last{outline:2px solid var(--gold);outline-offset:2px}
+
+  /* FEATURED RECAP */
+  .recap-card{padding:18px 20px}
+  .recap-top{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:12px}
+  .recap-badge{font-family:var(--pixel);font-size:9px;padding:6px 9px;border-radius:5px}
+  .recap-score{font-family:var(--mono);font-weight:700;font-size:30px}
+  .recap-score .them{color:var(--muted)}
+  .recap-meta{flex:1;min-width:140px}
+  .recap-meta .opp{font-size:15px;font-weight:600}
+  .recap-meta .date{font-size:12px;color:var(--muted);font-family:var(--mono)}
+  .recap-text{font-size:14px;color:var(--text);line-height:1.65;margin:0}
+
+  /* HIGH-SCORE LEADERS (arcade) */
+  .lead h3{font-family:var(--pixel);font-size:9px;letter-spacing:1px;color:var(--gold);font-weight:400;
+    margin-bottom:12px;border-bottom:1px dashed var(--line2);padding-bottom:9px}
+  .lead li{font-family:var(--mono)}
+  .lead li .p{color:var(--dim);font-size:12px;width:20px}
+  .lead li .nm{text-transform:uppercase;letter-spacing:.5px}
+  .lead li .v{color:var(--text)}
+  .lead li:first-child .v{color:var(--gold)}
+
+  /* PLAYER CARD MODAL */
+  tr.roster-row{cursor:pointer}
+  tr.roster-row:hover td{background:rgba(255,255,255,.04)}
+  .cardModal{position:fixed;inset:0;background:rgba(5,8,18,.80);display:flex;align-items:center;justify-content:center;
+    padding:20px;z-index:50}
+  .cardModal[hidden]{display:none}
+  .card-inner{background:var(--panel2);border:1px solid var(--line2);border-radius:14px;max-width:340px;width:100%;
+    padding:22px;position:relative;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+  .card-x{position:absolute;top:9px;right:13px;font-family:var(--pixel);font-size:11px;color:var(--muted);cursor:pointer}
+  .pc-head{text-align:center;border-bottom:1px dashed var(--line2);padding-bottom:14px;margin-bottom:14px}
+  .pc-head svg{display:block;margin:0 auto}
+  .pc-name{font-family:var(--pixel);font-size:13px;color:var(--gold);margin-top:10px;line-height:1.4}
+  .pc-line{font-family:var(--mono);font-size:13px;color:var(--muted);margin-top:8px}
+  .pc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:14px}
+  .pc-grid .c{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:8px 4px;text-align:center}
+  .pc-grid .c .k{font-size:9px;text-transform:uppercase;color:var(--muted);letter-spacing:.5px}
+  .pc-grid .c .v{font-family:var(--mono);font-weight:700;font-size:16px;margin-top:3px}
+  .pc-badges{display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
+  .pc-badge{font-family:var(--mono);font-size:11px;font-weight:600;padding:4px 8px;border-radius:6px;
+    background:rgba(245,197,24,.12);color:var(--gold);border:1px solid var(--gold-dim)}
+  .pc-badge.silver{background:rgba(255,255,255,.06);color:var(--text);border-color:var(--line2)}
+
   @media (max-width:540px){
     .sb-card{padding:12px 14px;min-width:84px}
     .sb-card .val{font-size:26px}
@@ -126,13 +185,20 @@
   <div class="sub">NorthShore Slo-Pitch · Thunder Bay</div>
 
   <div class="scoreboard" id="scoreboard"></div>
+  <div class="statstrip" id="teamBatting"></div>
   <div class="nextgame" id="nextgame" hidden></div>
+  <div class="formbar" id="formbar"></div>
   <div class="marchers" id="marchers"></div>
 </div>
 
 <div class="wrap">
+  <section id="recapSec" hidden>
+    <div class="sec-head"><h2>Last Game</h2></div>
+    <div class="panel recap-card" id="recapCard"></div>
+  </section>
+
   <section id="leadersSec">
-    <div class="sec-head"><h2>Leaders</h2></div>
+    <div class="sec-head"><h2>High Scores</h2></div>
     <div class="leaders" id="leaders"></div>
   </section>
 
@@ -160,6 +226,10 @@
   <div class="foot" id="foot"></div>
 </div>
 
+<div class="cardModal" id="cardModal" hidden>
+  <div class="card-inner" id="cardInner"></div>
+</div>
+
 <script>
 /* ---- Baked fallback so the page renders anywhere (Netlify serves the live data.json) ---- */
 const FALLBACK = {
@@ -169,6 +239,7 @@ const FALLBACK = {
   "record":{"w":3,"l":1,"t":0,"winPct":0.750},
   "standing":{"rank":7,"totalTeams":24,"diff":27,"last4":"W-W-W-L","streak":"L1"},
   "teamBatting":{"avg":0.635,"ops":1.462,"hr":2,"runs":92},
+  "recap":"A rough night on the road as the Invaders dropped one to Benchwarmers 10\u201322, the bats going quiet after a red-hot start to the season. Still 3\u20131 and sitting comfortably in the upper third of the league, with a quick chance to bounce right back.",
   "nextGame":{"date":"Tue, Jun 9","time":"6:00 PM","opponent":"Hitters","home":true,"park":"Delaney North"},
   "results":[
     {"date":"May 26","opp":"Dusty Gloves","home":true,"us":26,"them":0,"res":"W"},
@@ -266,7 +337,16 @@ const fmtAvg=n=>n==null?"—":n.toFixed(3).replace(/^0/,"");
 const strkClass=s=>!s||s==="—"?"strk-t":s[0]==="W"?"strk-w":s[0]==="L"?"strk-l":"strk-t";
 const ha=h=>h?'<span class="ha">vs</span>':'<span class="ha">@</span>';
 
+let CURRENT=null;
+function miniInvaderBig(color){
+  const c=4,cols=SPRITE[0].length,rows=SPRITE.length;
+  let r="";for(let y=0;y<rows;y++)for(let x=0;x<cols;x++) if(SPRITE[y][x]==="1")
+    r+=`<rect x="${x*c}" y="${y*c}" width="${c}" height="${c}" fill="${color}"/>`;
+  return `<svg width="44" height="32" viewBox="0 0 ${cols*c} ${rows*c}">${r}</svg>`;
+}
+
 function render(D){
+  CURRENT=D;
   invaderSVG(document.getElementById("bigInvader"),"#f5c518",6);
   document.getElementById("marchers").innerHTML =
     [..."0000"].map(()=>miniInvader("#3a4a6b")).join("");
@@ -276,6 +356,41 @@ function render(D){
     <div class="sb-card"><div class="label">Record</div><div class="val">${rec.w}<small>–</small>${rec.l}${rec.t?`<small>–</small>${rec.t}`:""}</div></div>
     <div class="sb-card"><div class="label">Win %</div><div class="val">${Math.round(rec.winPct*1000)/10}<small>%</small></div></div>
     <div class="sb-card rank"><div class="label">League</div><div class="val">#${st.rank}<small> / ${st.totalTeams}</small></div></div>`;
+
+  /* team batting strip */
+  const tb=D.teamBatting, tbEl=document.getElementById("teamBatting");
+  if(tb){ tbEl.hidden=false; tbEl.innerHTML=`
+    <div class="s"><div class="k">Team AVG</div><div class="v">${fmtAvg(tb.avg)}</div></div>
+    <div class="s"><div class="k">Team OPS</div><div class="v">${tb.ops?tb.ops.toFixed(3):"—"}</div></div>
+    <div class="s gold"><div class="k">Home Runs</div><div class="v">${tb.hr}</div></div>
+    <div class="s gold"><div class="k">Runs</div><div class="v">${tb.runs}</div></div>`; }
+  else tbEl.hidden=true;
+
+  /* form bar — oldest→newest, newest highlighted */
+  const fb=document.getElementById("formbar");
+  if(D.results&&D.results.length){ fb.hidden=false;
+    fb.innerHTML=`<span class="fb-lab">FORM</span>`+D.results.map((g,i)=>{
+      const cls=g.res==="W"?"w":g.res==="L"?"l":"t";
+      const last=i===D.results.length-1?" last":"";
+      const title=`${g.date} ${g.home?"vs":"@"} ${g.opp} ${g.us}–${g.them} ${g.res}`;
+      return `<span class="pip ${cls}${last}" title="${esc(title)}">${g.res}</span>`;
+    }).join("");
+  } else fb.hidden=true;
+
+  /* featured last-game recap */
+  const lr=(D.results&&D.results.length)?D.results[D.results.length-1]:null;
+  const recapSec=document.getElementById("recapSec");
+  if(lr&&D.recap){ recapSec.hidden=false;
+    const b=lr.res==="W"?"b-w":lr.res==="L"?"b-l":"b-t";
+    const word=lr.res==="W"?"WIN":lr.res==="L"?"LOSS":"TIE";
+    document.getElementById("recapCard").innerHTML=`
+      <div class="recap-top">
+        <span class="recap-badge ${b}">${word}</span>
+        <span class="recap-score"><span class="us">${lr.us}</span><span style="color:var(--dim)">–</span><span class="them">${lr.them}</span></span>
+        <span class="recap-meta"><div class="opp">${ha(lr.home)} ${esc(lr.opp)}</div><div class="date">${esc(lr.date)}</div></span>
+      </div>
+      <p class="recap-text">${esc(D.recap)}</p>`;
+  } else recapSec.hidden=true;
 
   const ng=D.nextGame, ngEl=document.getElementById("nextgame");
   if(ng){ ngEl.hidden=false; ngEl.innerHTML=`
@@ -320,7 +435,7 @@ function render(D){
   const ps=[...D.players].sort((a,b)=>(b.ops??-1)-(a.ops??-1));
   let r=`<thead><tr><th class="l">Player</th><th>GP</th><th>AB</th><th>H</th><th>HR</th><th>RBI</th><th>R</th><th>AVG</th><th>OPS</th></tr></thead><tbody>`;
   ps.forEach(p=>{
-    r+=`<tr><td class="l">${esc(p.name)}</td><td class="tnum">${p.gp}</td><td class="tnum">${p.ab}</td>`+
+    r+=`<tr class="roster-row" data-name="${esc(p.name)}"><td class="l">${esc(p.name)}</td><td class="tnum">${p.gp}</td><td class="tnum">${p.ab}</td>`+
        `<td class="tnum">${p.h}</td><td class="tnum">${p.hr}</td><td class="tnum">${p.rbi}</td><td class="tnum">${p.r}</td>`+
        `<td class="tnum">${fmtAvg(p.avg)}</td><td class="tnum">${p.ops==null?"—":p.ops.toFixed(3)}</td></tr>`;
   });
@@ -333,6 +448,53 @@ function render(D){
     `Standings & schedule auto-synced from <a href="${esc(D.leagueUrl||"#")}">NorthShore Unlimited</a>.`+
     (D.sheetUrl?`<br><a class="cta" href="${esc(D.sheetUrl)}">View Full Stats Sheet</a>`:"");
 }
+
+/* ---- Player card (tap a batting row) ---- */
+function rankOf(players,key,name){
+  const sorted=[...players].filter(x=>x[key]!=null).sort((a,b)=>b[key]-a[key]);
+  const i=sorted.findIndex(x=>x.name===name);
+  return i===-1?null:i+1;
+}
+function openPlayerCard(name){
+  const D=CURRENT; if(!D) return;
+  const p=D.players.find(x=>x.name===name); if(!p) return;
+  const avgS=p.avg==null?"—":p.avg.toFixed(3).replace(/^0/,"");
+  const opsS=p.ops==null?"—":p.ops.toFixed(3);
+  const metrics=[["OPS","ops"],["AVG","avg"],["Hits","h"],["RBI","rbi"],["Runs","r"],["HR","hr"]];
+  const badges=[];
+  metrics.forEach(([lab,key])=>{
+    if(key==="hr"&&(p.hr||0)===0) return;
+    if((p[key]||0)===0 && key!=="avg" && key!=="ops") return;
+    const rk=rankOf(D.players,key,name);
+    if(rk&&rk<=3) badges.push({t:"#"+rk+" "+lab,gold:rk===1});
+  });
+  document.getElementById("cardInner").innerHTML=`
+    <span class="card-x" id="cardX">&#10005;</span>
+    <div class="pc-head">
+      ${miniInvaderBig("#f5c518")}
+      <div class="pc-name">${esc(p.name.toUpperCase())}</div>
+      <div class="pc-line">${p.gp} GP &middot; ${avgS} AVG &middot; ${opsS} OPS</div>
+    </div>
+    <div class="pc-grid">
+      <div class="c"><div class="k">AB</div><div class="v">${p.ab}</div></div>
+      <div class="c"><div class="k">H</div><div class="v">${p.h}</div></div>
+      <div class="c"><div class="k">HR</div><div class="v">${p.hr}</div></div>
+      <div class="c"><div class="k">RBI</div><div class="v">${p.rbi}</div></div>
+      <div class="c"><div class="k">R</div><div class="v">${p.r}</div></div>
+      <div class="c"><div class="k">AVG</div><div class="v">${avgS}</div></div>
+      <div class="c" style="grid-column:span 2"><div class="k">OPS</div><div class="v">${opsS}</div></div>
+    </div>
+    ${badges.length?`<div class="pc-badges">${badges.map(b=>`<span class="pc-badge ${b.gold?"":"silver"}">${esc(b.t)}</span>`).join("")}</div>`:""}`;
+  document.getElementById("cardModal").hidden=false;
+  document.getElementById("cardX").onclick=closeCard;
+}
+function closeCard(){ document.getElementById("cardModal").hidden=true; }
+
+document.getElementById("roster").addEventListener("click",e=>{
+  const tr=e.target.closest("tr.roster-row"); if(tr&&tr.dataset.name) openPlayerCard(tr.dataset.name);
+});
+document.getElementById("cardModal").addEventListener("click",e=>{ if(e.target.id==="cardModal") closeCard(); });
+document.addEventListener("keydown",e=>{ if(e.key==="Escape") closeCard(); });
 
 /* render fallback immediately, then override with live data.json if present */
 render(FALLBACK);
