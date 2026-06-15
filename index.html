@@ -183,6 +183,13 @@
   .pc-badge{font-family:var(--mono);font-size:11px;font-weight:600;padding:4px 8px;border-radius:6px;
     background:rgba(245,197,24,.12);color:var(--gold);border:1px solid var(--gold-dim)}
   .pc-badge.silver{background:rgba(255,255,255,.06);color:var(--text);border-color:var(--line2)}
+  .pc-spotlight{margin-top:14px;border-top:1px dashed var(--line2);padding-top:12px}
+  .pc-spot-load{font-family:var(--mono);font-size:12px;color:var(--muted)}
+  .pc-spot-load::after{content:"_";animation:pcblink 1s steps(1) infinite}
+  @keyframes pcblink{50%{opacity:0}}
+  @media (prefers-reduced-motion:reduce){.pc-spot-load::after{animation:none}}
+  .pc-spot-text{font-size:13px;color:var(--text);line-height:1.6;margin:0}
+  .pc-spot-label{font-family:var(--pixel);font-size:8px;color:var(--gold);letter-spacing:1px;display:block;margin-bottom:7px}
 
   @media (max-width:540px){
     .sb-card{padding:12px 14px;min-width:84px}
@@ -497,9 +504,21 @@ function openPlayerCard(name){
       <div class="c"><div class="k">AVG</div><div class="v">${avgS}</div></div>
       <div class="c" style="grid-column:span 2"><div class="k">OPS</div><div class="v">${opsS}</div></div>
     </div>
-    ${badges.length?`<div class="pc-badges">${badges.map(b=>`<span class="pc-badge ${b.gold?"":"silver"}">${esc(b.t)}</span>`).join("")}</div>`:""}`;
+    ${badges.length?`<div class="pc-badges">${badges.map(b=>`<span class="pc-badge ${b.gold?"":"silver"}">${esc(b.t)}</span>`).join("")}</div>`:""}
+    <div class="pc-spotlight" id="pcSpot"><span class="pc-spot-load">Scouting report incoming</span></div>`;
   document.getElementById("cardModal").hidden=false;
   document.getElementById("cardX").onclick=closeCard;
+  fetchSpotlight(p.name);
+}
+async function fetchSpotlight(name){
+  const el=document.getElementById("pcSpot"); if(!el) return;        // captured for THIS card
+  try{
+    const r=await fetch("/.netlify/functions/spotlight?player="+encodeURIComponent(name));
+    if(!r.ok) throw 0;
+    const j=await r.json();
+    if(j&&j.spotlight){ el.innerHTML=`<span class="pc-spot-label">Scouting Report</span><p class="pc-spot-text">${esc(j.spotlight)}</p>`; return; }
+    throw 0;
+  }catch(_){ el.style.display="none"; }   // no backend / error → hide quietly, card still works
 }
 function closeCard(){ document.getElementById("cardModal").hidden=true; }
 

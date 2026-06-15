@@ -1,0 +1,9 @@
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+# Optional friendlier route: /api/spotlight → the function
+[[redirects]]
+  from = "/api/spotlight"
+  to = "/.netlify/functions/spotlight"
+  status = 200
