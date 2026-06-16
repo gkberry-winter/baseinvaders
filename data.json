@@ -1,33 +1,34 @@
 {
   "team": "Base Invaders",
-  "updated": "Jun 9, 2026",
+  "updated": "Jun 16, 2026",
   "leagueUrl": "https://northshoreunlimited.ca/standings/",
   "sheetUrl": "https://docs.google.com/spreadsheets/d/1GYBt5mEGkC8YAokzqvHLtemRHdrC714m1gaIqc4OXA4/edit",
   "record": {
-    "w": 3,
-    "l": 1,
+    "w": 4,
+    "l": 3,
     "t": 0,
-    "winPct": 0.75
+    "winPct": 0.5714285714285714
   },
   "standing": {
     "rank": 7,
     "totalTeams": 24,
-    "diff": 27,
-    "last4": "W-W-W-L",
-    "streak": "L1"
+    "diff": 41,
+    "last4": "W-L-L-W",
+    "streak": "W1"
   },
   "teamBatting": {
-    "avg": 0.635,
-    "ops": 1.462,
-    "hr": 2,
-    "runs": 92
+    "avg": 0.617,
+    "ops": 1.416,
+    "hr": 4,
+    "runs": 150
   },
+  "recap": "The Base Invaders put up a fight against the RCG Rockies but fell just short, dropping an 8–11 decision despite a strong collective effort at the plate. The offence was genuinely there — 20 hits spread across the lineup, with 10 players reaching base — but the runs didn't always follow, and the Rockies made the most of their opportunities. Jason led the charge with a 4-for-5 night and 3 RBI, giving the team a reliable anchor in the order all game long. Erik added a 3-for-5 performance with an RBI of his own, and Trevor chipped in a 2-for-3 line with an RBI to keep things competitive deep into the game. Brandon made his two at-bats count with a 1-for-2 showing and 2 RBI, and even Mark found a way to drive in a run despite a tough night at the dish. A three-run margin against a solid Rockies squad isn't a deficit that should discourage — the Base Invaders hit the ball all night and will look to tighten things up the next time out.",
   "nextGame": {
-    "date": "Tue, Jun 9",
-    "time": "6:00 PM",
-    "opponent": "Hitters",
+    "date": "Thu, Jun 18",
+    "opponent": "Giants",
     "home": true,
-    "park": "Delaney North"
+    "time": "6:00 PM",
+    "park": "Slovak"
   },
   "results": [
     {
@@ -61,24 +62,33 @@
       "us": 10,
       "them": 22,
       "res": "L"
-    }
-  ],
-  "schedule": [
+    },
     {
       "date": "Jun 9",
       "opp": "Hitters",
-      "home": true
+      "home": true,
+      "us": 17,
+      "them": 28,
+      "res": "L"
     },
     {
       "date": "Jun 11",
       "opp": "Bandits",
-      "home": false
+      "home": false,
+      "us": 33,
+      "them": 8,
+      "res": "W"
     },
     {
       "date": "Jun 15",
       "opp": "RCG Rockies",
-      "home": false
-    },
+      "home": false,
+      "us": 8,
+      "them": 11,
+      "res": "L"
+    }
+  ],
+  "schedule": [
     {
       "date": "Jun 18",
       "opp": "Giants",
@@ -163,210 +173,210 @@
   "standingsTable": [
     {
       "rank": 1,
-      "team": "Bases Loaded",
-      "w": 4,
+      "team": "Halfcut",
+      "w": 5,
       "l": 0,
       "t": 0,
-      "diff": 79,
-      "strk": "W4"
+      "diff": 120,
+      "strk": "W5"
     },
     {
       "rank": 2,
-      "team": "Walk off Warriors",
+      "team": "Expos",
       "w": 4,
       "l": 0,
       "t": 0,
-      "diff": 70,
+      "diff": 32,
       "strk": "W4"
     },
     {
       "rank": 3,
-      "team": "Halfcut",
-      "w": 3,
+      "team": "Bases Loaded",
+      "w": 5,
       "l": 0,
-      "t": 0,
-      "diff": 62,
-      "strk": "W3"
+      "t": 1,
+      "diff": 104,
+      "strk": "T1"
     },
     {
       "rank": 4,
-      "team": "Expos",
-      "w": 2,
+      "team": "Franki's",
+      "w": 5,
       "l": 0,
-      "t": 0,
-      "diff": 22,
-      "strk": "W2"
+      "t": 1,
+      "diff": 81,
+      "strk": "W4"
     },
     {
       "rank": 5,
-      "team": "Franki's",
-      "w": 3,
+      "team": "Benchwarmers",
+      "w": 4,
       "l": 0,
       "t": 1,
       "diff": 55,
-      "strk": "W2"
+      "strk": "W3"
     },
     {
       "rank": 6,
-      "team": "Benchwarmers",
-      "w": 2,
-      "l": 0,
+      "team": "Walk off Warriors",
+      "w": 4,
+      "l": 1,
       "t": 1,
-      "diff": 30,
-      "strk": "W1"
+      "diff": 61,
+      "strk": "T1"
     },
     {
       "rank": 7,
       "team": "Base Invaders",
-      "w": 3,
-      "l": 1,
+      "w": 4,
+      "l": 2,
       "t": 0,
-      "diff": 27,
-      "strk": "L1"
+      "diff": 41,
+      "strk": "W1"
     },
     {
       "rank": 8,
-      "team": "Bat Intentions",
+      "team": "Marinaders",
       "w": 3,
-      "l": 1,
+      "l": 2,
       "t": 0,
-      "diff": 13,
-      "strk": "W2"
+      "diff": 39,
+      "strk": "W3"
     },
     {
       "rank": 9,
       "team": "Chickadees",
-      "w": 2,
-      "l": 1,
+      "w": 3,
+      "l": 2,
       "t": 0,
       "diff": 24,
       "strk": "L1"
     },
     {
       "rank": 10,
-      "team": "Giants",
-      "w": 2,
+      "team": "Bat Intentions",
+      "w": 3,
       "l": 2,
       "t": 0,
-      "diff": 22,
-      "strk": "W1"
+      "diff": 12,
+      "strk": "L1"
     },
     {
       "rank": 11,
       "team": "Hitmen",
-      "w": 2,
+      "w": 3,
       "l": 2,
       "t": 0,
-      "diff": 3,
-      "strk": "W1"
+      "diff": 9,
+      "strk": "W2"
     },
     {
       "rank": 12,
-      "team": "Balls & Dolls",
+      "team": "Dusty Gloves",
       "w": 2,
       "l": 2,
       "t": 0,
-      "diff": 2,
+      "diff": -3,
       "strk": "W1"
     },
     {
       "rank": 13,
-      "team": "Saved by the Balls",
-      "w": 2,
-      "l": 2,
+      "team": "RCG Rockies",
+      "w": 3,
+      "l": 3,
       "t": 0,
-      "diff": -11,
-      "strk": "W1"
+      "diff": -58,
+      "strk": "L1"
     },
     {
       "rank": 14,
-      "team": "RCG Rockies",
+      "team": "Balls & Dolls",
       "w": 2,
-      "l": 2,
+      "l": 3,
       "t": 0,
-      "diff": -21,
+      "diff": -9,
       "strk": "L1"
     },
     {
       "rank": 15,
-      "team": "Marinaders",
-      "w": 1,
-      "l": 2,
+      "team": "Giants",
+      "w": 2,
+      "l": 4,
       "t": 0,
-      "diff": 24,
-      "strk": "W1"
+      "diff": 6,
+      "strk": "L2"
     },
     {
       "rank": 16,
-      "team": "Dusty Gloves",
-      "w": 1,
-      "l": 2,
+      "team": "Saved by the Balls",
+      "w": 2,
+      "l": 4,
       "t": 0,
-      "diff": -25,
-      "strk": "L1"
+      "diff": -30,
+      "strk": "L2"
     },
     {
       "rank": 17,
-      "team": "Originals",
-      "w": 1,
-      "l": 3,
+      "team": "Hitters",
+      "w": 2,
+      "l": 4,
       "t": 0,
-      "diff": -2,
-      "strk": "L3"
+      "diff": -39,
+      "strk": "W2"
     },
     {
       "rank": 18,
-      "team": "The Splinters",
+      "team": "Stanley Slammers",
       "w": 1,
-      "l": 3,
+      "l": 4,
       "t": 0,
-      "diff": -37,
-      "strk": "L2"
+      "diff": -55,
+      "strk": "L1"
     },
     {
       "rank": 19,
-      "team": "Stanley Slammers",
+      "team": "The Drivers",
       "w": 1,
-      "l": 3,
+      "l": 4,
       "t": 0,
-      "diff": -49,
-      "strk": "W1"
+      "diff": -70,
+      "strk": "L2"
     },
     {
       "rank": 20,
-      "team": "Bandits",
+      "team": "Originals",
       "w": 1,
-      "l": 3,
+      "l": 5,
       "t": 0,
-      "diff": -64,
-      "strk": "L2"
+      "diff": -35,
+      "strk": "L5"
     },
     {
       "rank": 21,
-      "team": "Bad Knees Bears",
-      "w": 0,
-      "l": 2,
+      "team": "The Splinters",
+      "w": 1,
+      "l": 5,
       "t": 0,
-      "diff": -27,
-      "strk": "L2"
+      "diff": -77,
+      "strk": "L4"
     },
     {
       "rank": 22,
-      "team": "The Drivers",
-      "w": 0,
-      "l": 3,
+      "team": "Bandits",
+      "w": 1,
+      "l": 5,
       "t": 0,
-      "diff": -58,
-      "strk": "L3"
+      "diff": -100,
+      "strk": "L4"
     },
     {
       "rank": 23,
-      "team": "Hitters",
+      "team": "Bad Knees Bears",
       "w": 0,
-      "l": 4,
+      "l": 3,
       "t": 0,
-      "diff": -68,
-      "strk": "L4"
+      "diff": -37,
+      "strk": "L3"
     },
     {
       "rank": 24,
@@ -381,159 +391,148 @@
   "leaders": {
     "AVG": [
       [
-        "Melvin",
-        "1.000"
-      ],
-      [
         "Jason",
-        ".875"
+        ".852"
       ],
       [
         "Greg",
         ".846"
       ],
       [
-        "Mark",
-        ".800"
+        "Melvin",
+        ".833"
+      ],
+      [
+        "Trevor",
+        ".778"
       ],
       [
         "Erik",
-        ".778"
+        ".771"
       ]
     ],
     "OPS": [
       [
-        "Melvin",
-        "2.333"
-      ],
-      [
         "Jason",
-        "2.132"
-      ],
-      [
-        "Erik",
-        "1.976"
-      ],
-      [
-        "Brandon",
-        "1.929"
+        "2.116"
       ],
       [
         "Greg",
-        "1.875"
+        "2.097"
+      ],
+      [
+        "Brandon",
+        "1.900"
+      ],
+      [
+        "Melvin",
+        "1.833"
+      ],
+      [
+        "Erik",
+        "1.795"
       ]
     ],
     "RBI": [
       [
         "Erik",
-        "14"
+        "19"
       ],
       [
         "Jason",
-        "11"
+        "15"
+      ],
+      [
+        "Greg",
+        "13"
       ],
       [
         "Alex",
-        "10"
-      ],
-      [
-        "Keith",
-        "8"
+        "12"
       ],
       [
         "Mark",
-        "7"
+        "11"
       ]
     ],
     "Hits": [
       [
-        "Jason",
-        "14"
+        "Erik",
+        "27"
       ],
       [
-        "Erik",
-        "14"
+        "Jason",
+        "23"
+      ],
+      [
+        "Greg",
+        "22"
       ],
       [
         "Brandon",
-        "13"
-      ],
-      [
-        "Alex",
-        "13"
+        "20"
       ],
       [
         "Brendan",
-        "13"
+        "16"
       ]
     ]
   },
   "players": [
     {
-      "name": "Melvin",
-      "gp": 1,
-      "ab": 3,
-      "h": 3,
-      "hr": 0,
-      "rbi": 1,
-      "r": 3,
-      "avg": 1.0,
-      "ops": 2.333
-    },
-    {
       "name": "Jason",
-      "gp": 4,
-      "ab": 16,
-      "h": 14,
+      "gp": 6,
+      "ab": 27,
+      "h": 23,
       "hr": 0,
-      "rbi": 11,
-      "r": 10,
-      "avg": 0.875,
-      "ops": 2.132
-    },
-    {
-      "name": "Erik",
-      "gp": 4,
-      "ab": 18,
-      "h": 14,
-      "hr": 1,
-      "rbi": 14,
-      "r": 15,
-      "avg": 0.778,
-      "ops": 1.976
-    },
-    {
-      "name": "Brandon",
-      "gp": 4,
-      "ab": 18,
-      "h": 13,
-      "hr": 0,
-      "rbi": 5,
-      "r": 13,
-      "avg": 0.722,
-      "ops": 1.929
+      "rbi": 15,
+      "r": 16,
+      "avg": 0.852,
+      "ops": 2.116
     },
     {
       "name": "Greg",
-      "gp": 4,
-      "ab": 13,
-      "h": 11,
-      "hr": 0,
-      "rbi": 5,
-      "r": 7,
+      "gp": 7,
+      "ab": 26,
+      "h": 22,
+      "hr": 1,
+      "rbi": 13,
+      "r": 15,
       "avg": 0.846,
-      "ops": 1.875
+      "ops": 2.097
     },
     {
-      "name": "Mark",
+      "name": "Brandon",
+      "gp": 7,
+      "ab": 29,
+      "h": 20,
+      "hr": 1,
+      "rbi": 8,
+      "r": 19,
+      "avg": 0.69,
+      "ops": 1.9
+    },
+    {
+      "name": "Melvin",
       "gp": 2,
-      "ab": 10,
-      "h": 8,
+      "ab": 6,
+      "h": 5,
       "hr": 0,
-      "rbi": 7,
-      "r": 4,
-      "avg": 0.8,
-      "ops": 1.718
+      "rbi": 1,
+      "r": 3,
+      "avg": 0.833,
+      "ops": 1.833
+    },
+    {
+      "name": "Erik",
+      "gp": 7,
+      "ab": 35,
+      "h": 27,
+      "hr": 1,
+      "rbi": 19,
+      "r": 25,
+      "avg": 0.771,
+      "ops": 1.795
     },
     {
       "name": "Keith",
@@ -548,36 +547,69 @@
     },
     {
       "name": "Brendan",
-      "gp": 4,
-      "ab": 19,
-      "h": 13,
+      "gp": 5,
+      "ab": 23,
+      "h": 16,
       "hr": 1,
       "rbi": 7,
-      "r": 9,
-      "avg": 0.684,
-      "ops": 1.632
+      "r": 11,
+      "avg": 0.696,
+      "ops": 1.609
     },
     {
-      "name": "Sam",
+      "name": "Trevor",
       "gp": 2,
       "ab": 9,
-      "h": 6,
+      "h": 7,
       "hr": 0,
-      "rbi": 1,
+      "rbi": 5,
       "r": 3,
-      "avg": 0.667,
-      "ops": 1.589
+      "avg": 0.778,
+      "ops": 1.556
+    },
+    {
+      "name": "Mark",
+      "gp": 5,
+      "ab": 20,
+      "h": 14,
+      "hr": 0,
+      "rbi": 11,
+      "r": 7,
+      "avg": 0.7,
+      "ops": 1.514
     },
     {
       "name": "Dallas",
-      "gp": 1,
-      "ab": 3,
-      "h": 2,
+      "gp": 3,
+      "ab": 8,
+      "h": 5,
       "hr": 0,
-      "rbi": 0,
-      "r": 2,
-      "avg": 0.667,
-      "ops": 1.333
+      "rbi": 1,
+      "r": 5,
+      "avg": 0.625,
+      "ops": 1.375
+    },
+    {
+      "name": "Katie",
+      "gp": 3,
+      "ab": 16,
+      "h": 10,
+      "hr": 0,
+      "rbi": 6,
+      "r": 3,
+      "avg": 0.625,
+      "ops": 1.313
+    },
+    {
+      "name": "Sam",
+      "gp": 3,
+      "ab": 12,
+      "h": 7,
+      "hr": 0,
+      "rbi": 1,
+      "r": 3,
+      "avg": 0.583,
+      "ops": 1.282
     },
     {
       "name": "Diana",
@@ -591,93 +623,92 @@
       "ops": 1.2
     },
     {
-      "name": "Alex",
+      "name": "Sean",
       "gp": 4,
-      "ab": 19,
-      "h": 13,
+      "ab": 14,
+      "h": 9,
       "hr": 0,
-      "rbi": 10,
-      "r": 8,
-      "avg": 0.684,
-      "ops": 1.16
-    },
-    {
-      "name": "Vee",
-      "gp": 1,
-      "ab": 3,
-      "h": 1,
-      "hr": 0,
-      "rbi": 0,
-      "r": 2,
-      "avg": 0.333,
-      "ops": 1.048
-    },
-    {
-      "name": "Scotty",
-      "gp": 2,
-      "ab": 10,
-      "h": 3,
-      "hr": 0,
-      "rbi": 2,
+      "rbi": 6,
       "r": 3,
-      "avg": 0.3,
-      "ops": 0.862
+      "avg": 0.643,
+      "ops": 1.188
+    },
+    {
+      "name": "Alex",
+      "gp": 6,
+      "ab": 26,
+      "h": 15,
+      "hr": 0,
+      "rbi": 12,
+      "r": 12,
+      "avg": 0.577,
+      "ops": 1.079
+    },
+    {
+      "name": "Alexander",
+      "gp": 3,
+      "ab": 11,
+      "h": 5,
+      "hr": 0,
+      "rbi": 4,
+      "r": 3,
+      "avg": 0.455,
+      "ops": 1.045
     },
     {
       "name": "Julie",
-      "gp": 4,
-      "ab": 20,
+      "gp": 5,
+      "ab": 22,
       "h": 8,
       "hr": 0,
       "rbi": 5,
       "r": 8,
-      "avg": 0.4,
-      "ops": 0.829
+      "avg": 0.364,
+      "ops": 0.755
     },
     {
-      "name": "Sean",
+      "name": "Scotty",
+      "gp": 5,
+      "ab": 19,
+      "h": 5,
+      "hr": 0,
+      "rbi": 8,
+      "r": 7,
+      "avg": 0.263,
+      "ops": 0.703
+    },
+    {
+      "name": "Vee",
       "gp": 2,
       "ab": 8,
-      "h": 4,
+      "h": 2,
       "hr": 0,
-      "rbi": 2,
-      "r": 1,
-      "avg": 0.5,
-      "ops": 0.806
+      "rbi": 0,
+      "r": 2,
+      "avg": 0.25,
+      "ops": 0.625
     },
     {
       "name": "Brooklyn",
-      "gp": 1,
-      "ab": 5,
-      "h": 1,
-      "hr": 0,
-      "rbi": 0,
-      "r": 1,
-      "avg": 0.2,
-      "ops": 0.6
-    },
-    {
-      "name": "Alexander",
-      "gp": 1,
-      "ab": 3,
-      "h": 0,
+      "gp": 3,
+      "ab": 13,
+      "h": 3,
       "hr": 0,
       "rbi": 1,
-      "r": 0,
-      "avg": null,
-      "ops": null
+      "r": 1,
+      "avg": 0.231,
+      "ops": 0.538
     },
     {
       "name": "Jordan",
-      "gp": 2,
-      "ab": 3,
-      "h": 0,
+      "gp": 5,
+      "ab": 9,
+      "h": 2,
       "hr": 0,
-      "rbi": 0,
+      "rbi": 1,
       "r": 0,
-      "avg": null,
-      "ops": null
+      "avg": 0.222,
+      "ops": 0.475
     }
-  ],
-  "recap": "The Invaders ran into a buzzsaw on the road, dropping a 10–22 decision to Benchwarmers after rolling to a 3–0 start. The early-season offense that had been putting up crooked numbers went cold at the wrong time, and a few sloppy innings in the field handed the hosts a cushion the bats could not chase down. Erik kept grinding out at-bats and Greg chipped in a couple of hits, but the rallies that defined the opening weeks never quite materialized. At 3–1 and seventh in a 24-team field, though, there is a whole season left to answer back — and a short turnaround to do it."
+  ]
 }
