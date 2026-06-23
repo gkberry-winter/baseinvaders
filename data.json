@@ -1,13 +1,13 @@
 {
   "team": "Base Invaders",
-  "updated": "Jun 19, 2026",
+  "updated": "Jun 23, 2026",
   "leagueUrl": "https://northshoreunlimited.ca/standings/",
   "sheetUrl": "https://docs.google.com/spreadsheets/d/1GYBt5mEGkC8YAokzqvHLtemRHdrC714m1gaIqc4OXA4/edit",
   "record": {
     "w": 4,
-    "l": 4,
+    "l": 5,
     "t": 0,
-    "winPct": 0.5
+    "winPct": 0.4444444444444444
   },
   "standing": {
     "rank": 13,
@@ -17,15 +17,15 @@
     "streak": "L2"
   },
   "teamBatting": {
-    "avg": 0.616,
-    "ops": 1.408,
-    "hr": 4,
-    "runs": 168
+    "avg": 0.613,
+    "ops": 1.406,
+    "hr": 5,
+    "runs": 180
   },
-  "recap": "The Base Invaders dropped a high-scoring affair to the Giants, 18–24, in a game that saw plenty of action at the plate on both sides. With 34 hits spread across 12 players reaching base, the offense was far from quiet — the runs just weren't quite enough to keep pace with a Giants squad that had a big night of their own. Brandon led the way with a 5-for-7 effort and 3 RBI, while Keith was equally relentless going 5-for-6 with an RBI, giving the Invaders a pair of players who refused to make easy outs all game long. Sean was locked in as well, going a perfect 4-for-4 with a team-high 4 RBI, and Mark chipped in a 2-for-3 line with 2 RBI to keep the middle of the order producing. Alexander added a 2-for-3 night with an RBI of his own, rounding out a lineup that genuinely brought it. A 6-run deficit in a game this offensively active stings, but the Base Invaders showed they can hit with anyone — the focus now turns to tightening things up on the other side of the ball.",
+  "recap": "Monday, June 22 was a tough night for the Base Invaders, dropping a 12–33 decision to Halfcut in a game that got away early and never came back. The offense wasn't quiet — the team racked up 21 hits and got 11 players on base — but the runs just couldn't keep pace with a Halfcut squad that was locked in all evening. Erik and Brendan each went a perfect 4-for-4, with Erik driving in four and Brendan adding two of his own, giving the lineup a backbone even when the scoreboard was working against them. Melvin provided the night's biggest moment, going 1-for-2 with a home run and three RBI, while Jason chipped in a 3-for-4 effort with two RBI and Katie contributed a 2-for-4 night with two RBI of her own. There was genuine production up and down the order, and those individual performances are worth carrying into next week. The Base Invaders will look to put this one behind them and bring the same energy with a cleaner result.",
   "nextGame": {
-    "date": "Mon, Jun 22",
-    "opponent": "Halfcut",
+    "date": "Fri, Jun 26",
+    "opponent": "Dusty Gloves",
     "home": true,
     "time": "7:45 PM",
     "park": "North End"
@@ -94,14 +94,17 @@
       "us": 18,
       "them": 24,
       "res": "L"
-    }
-  ],
-  "schedule": [
+    },
     {
       "date": "Jun 22",
       "opp": "Halfcut",
-      "home": true
-    },
+      "home": true,
+      "us": 12,
+      "them": 33,
+      "res": "L"
+    }
+  ],
+  "schedule": [
     {
       "date": "Jun 30",
       "opp": "Stanley Slammers",
@@ -395,55 +398,55 @@
     "AVG": [
       [
         "Jason",
-        ".867"
+        ".853"
       ],
       [
-        "Melvin",
-        ".833"
+        "Erik",
+        ".795"
       ],
       [
         "Greg",
-        ".813"
+        ".794"
       ],
       [
         "Trevor",
         ".778"
       ],
       [
-        "Erik",
-        ".771"
+        "Keith",
+        ".769"
       ]
     ],
     "OPS": [
       [
         "Jason",
-        "2.104"
+        "2.092"
+      ],
+      [
+        "Melvin",
+        "2.000"
       ],
       [
         "Greg",
-        "1.990"
+        "1.963"
       ],
       [
         "Brandon",
         "1.836"
       ],
       [
-        "Melvin",
-        "1.833"
-      ],
-      [
         "Erik",
-        "1.795"
+        "1.814"
       ]
     ],
     "RBI": [
       [
         "Erik",
-        "19"
+        "23"
       ],
       [
         "Jason",
-        "15"
+        "17"
       ],
       [
         "Greg",
@@ -461,48 +464,59 @@
     "Hits": [
       [
         "Erik",
-        "27"
+        "31"
       ],
       [
         "Jason",
-        "26"
+        "29"
       ],
       [
         "Greg",
-        "26"
+        "27"
       ],
       [
         "Brandon",
         "25"
       ],
       [
-        "Alex",
-        "17"
+        "Brendan",
+        "20"
       ]
     ]
   },
   "players": [
     {
       "name": "Jason",
-      "gp": 7,
-      "ab": 30,
-      "h": 26,
+      "gp": 8,
+      "ab": 34,
+      "h": 29,
       "hr": 0,
-      "rbi": 15,
-      "r": 16,
-      "avg": 0.867,
-      "ops": 2.104
+      "rbi": 17,
+      "r": 18,
+      "avg": 0.853,
+      "ops": 2.092
+    },
+    {
+      "name": "Melvin",
+      "gp": 3,
+      "ab": 8,
+      "h": 6,
+      "hr": 1,
+      "rbi": 4,
+      "r": 4,
+      "avg": 0.75,
+      "ops": 2
     },
     {
       "name": "Greg",
-      "gp": 8,
-      "ab": 32,
-      "h": 26,
+      "gp": 9,
+      "ab": 34,
+      "h": 27,
       "hr": 1,
       "rbi": 13,
-      "r": 17,
-      "avg": 0.813,
-      "ops": 1.99
+      "r": 18,
+      "avg": 0.794,
+      "ops": 1.963
     },
     {
       "name": "Brandon",
@@ -516,26 +530,26 @@
       "ops": 1.836
     },
     {
-      "name": "Melvin",
-      "gp": 2,
-      "ab": 6,
-      "h": 5,
-      "hr": 0,
-      "rbi": 1,
-      "r": 3,
-      "avg": 0.833,
-      "ops": 1.833
+      "name": "Erik",
+      "gp": 8,
+      "ab": 39,
+      "h": 31,
+      "hr": 1,
+      "rbi": 23,
+      "r": 25,
+      "avg": 0.795,
+      "ops": 1.814
     },
     {
-      "name": "Erik",
-      "gp": 7,
-      "ab": 35,
-      "h": 27,
+      "name": "Brendan",
+      "gp": 6,
+      "ab": 27,
+      "h": 20,
       "hr": 1,
-      "rbi": 19,
-      "r": 25,
-      "avg": 0.771,
-      "ops": 1.795
+      "rbi": 9,
+      "r": 13,
+      "avg": 0.741,
+      "ops": 1.741
     },
     {
       "name": "Ty",
@@ -560,17 +574,6 @@
       "ops": 1.646
     },
     {
-      "name": "Brendan",
-      "gp": 5,
-      "ab": 23,
-      "h": 16,
-      "hr": 1,
-      "rbi": 7,
-      "r": 11,
-      "avg": 0.696,
-      "ops": 1.609
-    },
-    {
       "name": "Trevor",
       "gp": 2,
       "ab": 9,
@@ -583,25 +586,25 @@
     },
     {
       "name": "Mark",
-      "gp": 6,
-      "ab": 23,
-      "h": 16,
+      "gp": 7,
+      "ab": 25,
+      "h": 17,
       "hr": 0,
       "rbi": 13,
       "r": 8,
-      "avg": 0.696,
-      "ops": 1.534
+      "avg": 0.68,
+      "ops": 1.492
     },
     {
       "name": "Sean",
-      "gp": 5,
-      "ab": 18,
-      "h": 13,
+      "gp": 6,
+      "ab": 21,
+      "h": 15,
       "hr": 0,
-      "rbi": 10,
-      "r": 5,
-      "avg": 0.722,
-      "ops": 1.384
+      "rbi": 11,
+      "r": 7,
+      "avg": 0.714,
+      "ops": 1.388
     },
     {
       "name": "Dallas",
@@ -613,17 +616,6 @@
       "r": 5,
       "avg": 0.625,
       "ops": 1.375
-    },
-    {
-      "name": "Sam",
-      "gp": 3,
-      "ab": 12,
-      "h": 7,
-      "hr": 0,
-      "rbi": 1,
-      "r": 3,
-      "avg": 0.583,
-      "ops": 1.282
     },
     {
       "name": "Diana",
@@ -648,26 +640,37 @@
       "ops": 1.105
     },
     {
-      "name": "Katie",
-      "gp": 4,
-      "ab": 19,
-      "h": 10,
-      "hr": 0,
-      "rbi": 6,
-      "r": 3,
-      "avg": 0.526,
-      "ops": 1.105
-    },
-    {
-      "name": "Alexander",
+      "name": "Sam",
       "gp": 4,
       "ab": 14,
       "h": 7,
       "hr": 0,
-      "rbi": 5,
-      "r": 4,
+      "rbi": 1,
+      "r": 3,
       "avg": 0.5,
       "ops": 1.105
+    },
+    {
+      "name": "Alexander",
+      "gp": 5,
+      "ab": 16,
+      "h": 8,
+      "hr": 0,
+      "rbi": 6,
+      "r": 4,
+      "avg": 0.5,
+      "ops": 1.092
+    },
+    {
+      "name": "Katie",
+      "gp": 5,
+      "ab": 23,
+      "h": 12,
+      "hr": 0,
+      "rbi": 8,
+      "r": 4,
+      "avg": 0.522,
+      "ops": 1.087
     },
     {
       "name": "Jordan",
@@ -692,17 +695,6 @@
       "ops": 0.733
     },
     {
-      "name": "Julie",
-      "gp": 6,
-      "ab": 24,
-      "h": 8,
-      "hr": 0,
-      "rbi": 5,
-      "r": 8,
-      "avg": 0.333,
-      "ops": 0.718
-    },
-    {
       "name": "Scotty",
       "gp": 5,
       "ab": 19,
@@ -714,15 +706,26 @@
       "ops": 0.703
     },
     {
+      "name": "Julie",
+      "gp": 7,
+      "ab": 28,
+      "h": 9,
+      "hr": 0,
+      "rbi": 5,
+      "r": 8,
+      "avg": 0.321,
+      "ops": 0.688
+    },
+    {
       "name": "Brooklyn",
-      "gp": 4,
-      "ab": 19,
-      "h": 5,
+      "gp": 5,
+      "ab": 22,
+      "h": 6,
       "hr": 0,
       "rbi": 2,
       "r": 1,
-      "avg": 0.263,
-      "ops": 0.579
+      "avg": 0.273,
+      "ops": 0.577
     }
   ]
 }
