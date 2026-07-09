@@ -1,13 +1,13 @@
 {
   "team": "Base Invaders",
-  "updated": "Jul 8, 2026",
+  "updated": "Jul 9, 2026",
   "leagueUrl": "https://northshoreunlimited.ca/standings/",
   "sheetUrl": "https://docs.google.com/spreadsheets/d/1GYBt5mEGkC8YAokzqvHLtemRHdrC714m1gaIqc4OXA4/edit",
   "record": {
-    "w": 6,
+    "w": 5,
     "l": 6,
     "t": 0,
-    "winPct": 0.5
+    "winPct": 0.45454545454545453
   },
   "standing": {
     "rank": 13,
@@ -20,7 +20,7 @@
     "avg": 0.591,
     "ops": 1.38,
     "hr": 8,
-    "runs": 212
+    "runs": 206
   },
   "recap": "The Base Invaders posted a clean 6–0 shutout over the Walk Off Warriors on Tuesday, July 7, spreading 14 hits across the lineup to build a comfortable margin that was never really in doubt. The offense came in steady waves rather than one big burst, with contributions up and down the order keeping the Warriors' defense busy all night. Jason led the way with a 3-for-4 effort and 2 RBI, while Erik matched him with 3 hits in 4 at-bats to give the top of the lineup a reliable foundation. Brendan went 2-for-3 with an RBI and Mark added a 2-for-4 night with an RBI of his own, ensuring the run support stayed consistent through the middle innings. Sean chipped in with a 2-for-4 performance to round out a balanced attack that saw six different players reach base. It was a well-rounded team effort and a satisfying Tuesday night all around for the Base Invaders.",
   "nextGame": {
@@ -112,23 +112,20 @@
       "res": "W"
     },
     {
-      "date": "Jul 1",
-      "opp": "Marinaders",
-      "home": false,
-      "us": 6,
-      "them": 18,
-      "res": "L"
-    },
-    {
       "date": "Jul 7",
       "opp": "Walk off Warriors",
       "home": false,
       "us": 6,
-      "them": 0,
-      "res": "W"
+      "them": 18,
+      "res": "L"
     }
   ],
   "schedule": [
+    {
+      "date": "",
+      "opp": "Marinaders",
+      "home": false
+    },
     {
       "date": "Jul 9",
       "opp": "Originals",
