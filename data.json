@@ -1,6 +1,6 @@
 {
   "team": "Base Invaders",
-  "updated": "Jul 12, 2026",
+  "updated": "Jul 13, 2026",
   "leagueUrl": "https://northshoreunlimited.ca/standings/",
   "sheetUrl": "https://docs.google.com/spreadsheets/d/1GYBt5mEGkC8YAokzqvHLtemRHdrC714m1gaIqc4OXA4/edit",
   "record": {
@@ -175,14 +175,14 @@
       "home": true
     },
     {
+      "date": "Aug 17",
+      "opp": "Marinaders",
+      "home": false
+    },
+    {
       "date": "Aug 18",
       "opp": "Bases Loaded",
       "home": true
-    },
-    {
-      "date": "",
-      "opp": "Marinaders",
-      "home": false
     }
   ],
   "standingsTable": [
