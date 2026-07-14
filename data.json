@@ -1,6 +1,6 @@
 {
   "team": "Base Invaders",
-  "updated": "Jul 13, 2026",
+  "updated": "Jul 14, 2026",
   "leagueUrl": "https://northshoreunlimited.ca/standings/",
   "sheetUrl": "https://docs.google.com/spreadsheets/d/1GYBt5mEGkC8YAokzqvHLtemRHdrC714m1gaIqc4OXA4/edit",
   "record": {
@@ -130,17 +130,17 @@
   ],
   "schedule": [
     {
-      "date": "Jul 14",
+      "date": "Aug 20",
       "opp": "Expos",
       "home": true
     },
     {
-      "date": "Jul 20",
+      "date": "Jul 16",
       "opp": "Chickadees",
       "home": false
     },
     {
-      "date": "Jul 14",
+      "date": "Jul 20",
       "opp": "The Drivers",
       "home": false
     },
@@ -175,14 +175,14 @@
       "home": true
     },
     {
-      "date": "Aug 17",
-      "opp": "Marinaders",
-      "home": false
-    },
-    {
       "date": "Aug 18",
       "opp": "Bases Loaded",
       "home": true
+    },
+    {
+      "date": "Aug 17",
+      "opp": "Marinaders",
+      "home": false
     }
   ],
   "standingsTable": [
@@ -572,17 +572,6 @@
       "ops": 2
     },
     {
-      "name": "Brandon",
-      "gp": 9,
-      "ab": 38,
-      "h": 27,
-      "hr": 2,
-      "rbi": 13,
-      "r": 23,
-      "avg": 0.711,
-      "ops": 1.922
-    },
-    {
       "name": "Sean",
       "gp": 8,
       "ab": 30,
@@ -592,6 +581,17 @@
       "r": 10,
       "avg": 0.7,
       "ops": 1.376
+    },
+    {
+      "name": "Brandon",
+      "gp": 9,
+      "ab": 38,
+      "h": 27,
+      "hr": 2,
+      "rbi": 13,
+      "r": 23,
+      "avg": 0.711,
+      "ops": 1.922
     },
     {
       "name": "Brendan",
@@ -605,17 +605,6 @@
       "ops": 1.682
     },
     {
-      "name": "Ty",
-      "gp": 1,
-      "ab": 3,
-      "h": 2,
-      "hr": 0,
-      "rbi": 0,
-      "r": 0,
-      "avg": 0.667,
-      "ops": 1.667
-    },
-    {
       "name": "Mark",
       "gp": 10,
       "ab": 39,
@@ -625,6 +614,17 @@
       "r": 12,
       "avg": 0.667,
       "ops": 1.496
+    },
+    {
+      "name": "Ty",
+      "gp": 1,
+      "ab": 3,
+      "h": 2,
+      "hr": 0,
+      "rbi": 0,
+      "r": 0,
+      "avg": 0.667,
+      "ops": 1.667
     },
     {
       "name": "Alex P",
@@ -649,17 +649,6 @@
       "ops": 1.303
     },
     {
-      "name": "Diana",
-      "gp": 1,
-      "ab": 5,
-      "h": 3,
-      "hr": 0,
-      "rbi": 1,
-      "r": 1,
-      "avg": 0.6,
-      "ops": 1.2
-    },
-    {
       "name": "Alex N",
       "gp": 10,
       "ab": 43,
@@ -671,15 +660,26 @@
       "ops": 1.101
     },
     {
-      "name": "Scotty",
-      "gp": 7,
-      "ab": 28,
-      "h": 12,
+      "name": "Diana",
+      "gp": 1,
+      "ab": 5,
+      "h": 3,
       "hr": 0,
-      "rbi": 10,
-      "r": 12,
-      "avg": 0.429,
-      "ops": 1.029
+      "rbi": 1,
+      "r": 1,
+      "avg": 0.6,
+      "ops": 1.2
+    },
+    {
+      "name": "Dallas",
+      "gp": 4,
+      "ab": 11,
+      "h": 5,
+      "hr": 0,
+      "rbi": 1,
+      "r": 5,
+      "avg": 0.455,
+      "ops": 1.055
     },
     {
       "name": "Vee",
@@ -693,15 +693,15 @@
       "ops": 0.733
     },
     {
-      "name": "Dallas",
-      "gp": 4,
-      "ab": 11,
-      "h": 5,
+      "name": "Scotty",
+      "gp": 7,
+      "ab": 28,
+      "h": 12,
       "hr": 0,
-      "rbi": 1,
-      "r": 5,
-      "avg": 0.455,
-      "ops": 1.055
+      "rbi": 10,
+      "r": 12,
+      "avg": 0.429,
+      "ops": 1.029
     },
     {
       "name": "Katie",
