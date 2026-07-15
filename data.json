@@ -1,6 +1,6 @@
 {
   "team": "Base Invaders",
-  "updated": "Jul 14, 2026",
+  "updated": "Jul 15, 2026",
   "leagueUrl": "https://northshoreunlimited.ca/standings/",
   "sheetUrl": "https://docs.google.com/spreadsheets/d/1GYBt5mEGkC8YAokzqvHLtemRHdrC714m1gaIqc4OXA4/edit",
   "record": {
@@ -24,10 +24,10 @@
   },
   "recap": "The Base Invaders rolled to a 25–10 victory over the Originals on Thursday, July 9, putting together a complete offensive effort that was never really in doubt. The team racked up 14 hits across six players who reached base, spreading the damage consistently throughout the lineup. Jason led the way with a 3-for-4 night and 2 RBI, while Erik matched him hit-for-hit going 3-for-4 in a quietly excellent performance. Brendan contributed a 2-for-3 line with an RBI, Mark went 2-for-4 with an RBI of his own, and Sean added a 2-for-4 effort to keep the pressure on. The 15-run margin reflects a team that showed up ready to play and made the most of its opportunities from start to finish.",
   "nextGame": {
-    "date": "Tue, Jul 14",
-    "opponent": "Expos",
-    "home": true,
-    "time": "6:00 PM",
+    "date": "Thu, Jul 16",
+    "opponent": "Chickadees",
+    "home": false,
+    "time": "7:45 PM",
     "park": "Slovak"
   },
   "results": [
@@ -130,7 +130,7 @@
   ],
   "schedule": [
     {
-      "date": "Aug 20",
+      "date": "Aug 26",
       "opp": "Expos",
       "home": true
     },
