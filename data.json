@@ -4,10 +4,10 @@
   "leagueUrl": "https://northshoreunlimited.ca/standings/",
   "sheetUrl": "https://docs.google.com/spreadsheets/d/1GYBt5mEGkC8YAokzqvHLtemRHdrC714m1gaIqc4OXA4/edit",
   "record": {
-    "w": 8,
+    "w": 7,
     "l": 6,
     "t": 0,
-    "winPct": 0.5714285714285714
+    "winPct": 0.5384615384615384
   },
   "standing": {
     "rank": 14,
@@ -20,9 +20,9 @@
     "avg": 0.621,
     "ops": 1.456,
     "hr": 13,
-    "runs": 293
+    "runs": 262
   },
-  "recap": "The Base Invaders picked up a 31–0 win over the Chickadees on Thursday, August 27, though the final score tells a story that the box score can't quite explain. Despite not recording a single hit, home run, or baserunner on the night, the runs found a way to come across — a testament to the kind of patient, opportunistic approach that can quietly add up over the course of a game. There was no single hero to point to, as the effort was spread evenly across the lineup and the field. Nights like this are a little hard to describe but easy to appreciate, and the team will take the win and move forward. A 31–0 result is a 31–0 result, and the Base Invaders are glad to have it in the books.",
+  "recap": "The Base Invaders put together one of their most complete offensive performances of the season on Monday, July 20, rolling past the Drivers 31–8 behind a staggering 43 hits and contributions up and down the lineup. Vee was the standout of the night, going a perfect 6-for-6 with 4 RBI, while Jason added a 4-for-5 effort with 5 RBI to pace the attack. Sean chipped in 3-for-6 with 4 RBI, and Brendan went 4-for-5 with 3 RBI to keep the runs coming in waves. Greg rounded out the big nights with a clean 3-for-3 and 3 RBI, part of a relentless Invaders lineup that sent 11 players reaching base over the course of the game. The team also got a home run on the night, capping off an evening where almost nothing went wrong at the plate. Credit to the Drivers for battling through a tough night — the Invaders will look to carry this momentum forward.",
   "nextGame": {
     "date": "Fri, Jul 24",
     "opponent": "Walk off Warriors",
@@ -128,14 +128,6 @@
       "res": "W"
     },
     {
-      "date": "Aug 27",
-      "opp": "Chickadees",
-      "home": false,
-      "us": 31,
-      "them": 0,
-      "res": "W"
-    },
-    {
       "date": "Jul 20",
       "opp": "The Drivers",
       "home": false,
@@ -145,11 +137,6 @@
     }
   ],
   "schedule": [
-    {
-      "date": "Aug 26",
-      "opp": "Expos",
-      "home": true
-    },
     {
       "date": "Jul 28",
       "opp": "Bad Knees Bears",
@@ -188,6 +175,16 @@
     {
       "date": "Aug 17",
       "opp": "Marinaders",
+      "home": false
+    },
+    {
+      "date": "Aug 26",
+      "opp": "Expos",
+      "home": true
+    },
+    {
+      "date": "Aug 27",
+      "opp": "Chickadees",
       "home": false
     }
   ],
@@ -523,17 +520,6 @@
       "ops": 2.062
     },
     {
-      "name": "Keith",
-      "gp": 3,
-      "ab": 13,
-      "h": 10,
-      "hr": 0,
-      "rbi": 9,
-      "r": 7,
-      "avg": 0.769,
-      "ops": 1.646
-    },
-    {
       "name": "Dillon",
       "gp": 2,
       "ab": 10,
@@ -556,6 +542,17 @@
       "ops": 1.764
     },
     {
+      "name": "Keith",
+      "gp": 3,
+      "ab": 13,
+      "h": 10,
+      "hr": 0,
+      "rbi": 9,
+      "r": 7,
+      "avg": 0.769,
+      "ops": 1.646
+    },
+    {
       "name": "Trevor",
       "gp": 2,
       "ab": 9,
@@ -565,28 +562,6 @@
       "r": 3,
       "avg": 0.778,
       "ops": 1.556
-    },
-    {
-      "name": "Melvin",
-      "gp": 3,
-      "ab": 8,
-      "h": 6,
-      "hr": 1,
-      "rbi": 4,
-      "r": 4,
-      "avg": 0.75,
-      "ops": 2
-    },
-    {
-      "name": "Sean",
-      "gp": 9,
-      "ab": 36,
-      "h": 24,
-      "hr": 0,
-      "rbi": 15,
-      "r": 12,
-      "avg": 0.667,
-      "ops": 1.346
     },
     {
       "name": "Brandon",
@@ -600,6 +575,17 @@
       "ops": 1.931
     },
     {
+      "name": "Melvin",
+      "gp": 3,
+      "ab": 8,
+      "h": 6,
+      "hr": 1,
+      "rbi": 4,
+      "r": 4,
+      "avg": 0.75,
+      "ops": 2
+    },
+    {
       "name": "Brendan",
       "gp": 10,
       "ab": 45,
@@ -609,6 +595,17 @@
       "r": 23,
       "avg": 0.711,
       "ops": 1.707
+    },
+    {
+      "name": "Sean",
+      "gp": 9,
+      "ab": 36,
+      "h": 24,
+      "hr": 0,
+      "rbi": 15,
+      "r": 12,
+      "avg": 0.667,
+      "ops": 1.346
     },
     {
       "name": "Mark",
@@ -633,15 +630,15 @@
       "ops": 1.667
     },
     {
-      "name": "Alex P",
-      "gp": 7,
-      "ab": 26,
-      "h": 16,
-      "hr": 2,
-      "rbi": 8,
-      "r": 6,
-      "avg": 0.615,
-      "ops": 1.591
+      "name": "Vee",
+      "gp": 4,
+      "ab": 16,
+      "h": 9,
+      "hr": 0,
+      "rbi": 4,
+      "r": 7,
+      "avg": 0.563,
+      "ops": 1.167
     },
     {
       "name": "Sam",
@@ -653,6 +650,17 @@
       "r": 7,
       "avg": 0.609,
       "ops": 1.48
+    },
+    {
+      "name": "Alex P",
+      "gp": 7,
+      "ab": 26,
+      "h": 16,
+      "hr": 2,
+      "rbi": 8,
+      "r": 6,
+      "avg": 0.615,
+      "ops": 1.591
     },
     {
       "name": "Alex N",
@@ -686,17 +694,6 @@
       "r": 5,
       "avg": 0.455,
       "ops": 1.055
-    },
-    {
-      "name": "Vee",
-      "gp": 4,
-      "ab": 16,
-      "h": 9,
-      "hr": 0,
-      "rbi": 4,
-      "r": 7,
-      "avg": 0.563,
-      "ops": 1.167
     },
     {
       "name": "Scotty",
