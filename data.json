@@ -1,6 +1,6 @@
 {
   "team": "Base Invaders",
-  "updated": "Jul 22, 2026",
+  "updated": "Jul 23, 2026",
   "leagueUrl": "https://northshoreunlimited.ca/standings/",
   "sheetUrl": "https://docs.google.com/spreadsheets/d/1GYBt5mEGkC8YAokzqvHLtemRHdrC714m1gaIqc4OXA4/edit",
   "record": {
@@ -10,11 +10,11 @@
     "winPct": 0.5384615384615384
   },
   "standing": {
-    "rank": 14,
+    "rank": 12,
     "totalTeams": 24,
-    "diff": 30,
-    "last4": "L-W-L-W",
-    "streak": "W1"
+    "diff": 53,
+    "last4": "W-L-W-W",
+    "streak": "W2"
   },
   "teamBatting": {
     "avg": 0.621,
@@ -192,218 +192,218 @@
     {
       "rank": 1,
       "team": "Bases Loaded",
-      "w": 10,
-      "l": 0,
+      "w": 11,
+      "l": 1,
       "t": 1,
-      "diff": 176,
-      "strk": "W5"
+      "diff": 194,
+      "strk": "W1"
     },
     {
       "rank": 2,
       "team": "Benchwarmers",
-      "w": 10,
-      "l": 0,
+      "w": 12,
+      "l": 1,
       "t": 2,
-      "diff": 193,
-      "strk": "W6"
+      "diff": 211,
+      "strk": "L1"
     },
     {
       "rank": 3,
-      "team": "Halfcut",
-      "w": 9,
+      "team": "Franki's",
+      "w": 12,
       "l": 1,
-      "t": 0,
-      "diff": 192,
+      "t": 2,
+      "diff": 162,
       "strk": "W4"
     },
     {
       "rank": 4,
-      "team": "Franki's",
-      "w": 10,
-      "l": 1,
-      "t": 2,
-      "diff": 139,
-      "strk": "W2"
+      "team": "Marinaders",
+      "w": 11,
+      "l": 2,
+      "t": 0,
+      "diff": 142,
+      "strk": "W11"
     },
     {
       "rank": 5,
-      "team": "Walk off Warriors",
+      "team": "Halfcut",
       "w": 10,
       "l": 2,
-      "t": 1,
-      "diff": 111,
-      "strk": "W4"
+      "t": 0,
+      "diff": 223,
+      "strk": "L1"
     },
     {
       "rank": 6,
-      "team": "Marinaders",
-      "w": 8,
+      "team": "Walk off Warriors",
+      "w": 12,
       "l": 2,
-      "t": 0,
-      "diff": 107,
-      "strk": "W8"
+      "t": 1,
+      "diff": 148,
+      "strk": "W6"
     },
     {
       "rank": 7,
       "team": "Expos",
-      "w": 9,
+      "w": 11,
       "l": 2,
       "t": 1,
-      "diff": 80,
-      "strk": "L2"
+      "diff": 107,
+      "strk": "W2"
     },
     {
       "rank": 8,
-      "team": "Giants",
+      "team": "Bat Intentions",
       "w": 8,
-      "l": 5,
-      "t": 1,
-      "diff": 86,
+      "l": 6,
+      "t": 0,
+      "diff": 46,
       "strk": "W2"
     },
     {
       "rank": 9,
       "team": "Chickadees",
-      "w": 7,
-      "l": 5,
+      "w": 8,
+      "l": 6,
       "t": 0,
-      "diff": 14,
-      "strk": "L2"
+      "diff": 23,
+      "strk": "W1"
     },
     {
       "rank": 10,
-      "team": "Dusty Gloves",
-      "w": 5,
-      "l": 4,
-      "t": 1,
-      "diff": 19,
-      "strk": "T1"
-    },
-    {
-      "rank": 11,
-      "team": "RCG Rockies",
-      "w": 6,
-      "l": 5,
-      "t": 0,
-      "diff": -31,
-      "strk": "W2"
-    },
-    {
-      "rank": 12,
-      "team": "Hitmen",
-      "w": 7,
+      "team": "Giants",
+      "w": 8,
       "l": 6,
-      "t": 0,
-      "diff": -24,
+      "t": 1,
+      "diff": 84,
       "strk": "L1"
     },
     {
-      "rank": 13,
-      "team": "Bat Intentions",
+      "rank": 11,
+      "team": "Dusty Gloves",
       "w": 6,
+      "l": 5,
+      "t": 1,
+      "diff": 23,
+      "strk": "W1"
+    },
+    {
+      "rank": 12,
+      "team": "Base Invaders",
+      "w": 7,
       "l": 6,
       "t": 0,
-      "diff": 39,
+      "diff": 53,
+      "strk": "W2"
+    },
+    {
+      "rank": 13,
+      "team": "RCG Rockies",
+      "w": 7,
+      "l": 7,
+      "t": 0,
+      "diff": -35,
       "strk": "L2"
     },
     {
       "rank": 14,
-      "team": "Base Invaders",
-      "w": 6,
-      "l": 6,
+      "team": "Saved by the Balls",
+      "w": 7,
+      "l": 8,
       "t": 0,
-      "diff": 30,
-      "strk": "W1"
+      "diff": -12,
+      "strk": "W2"
     },
     {
       "rank": 15,
       "team": "Hitters",
-      "w": 6,
+      "w": 7,
       "l": 8,
       "t": 0,
-      "diff": -25,
-      "strk": "W2"
+      "diff": -22,
+      "strk": "W3"
     },
     {
       "rank": 16,
-      "team": "Saved by the Balls",
-      "w": 5,
-      "l": 7,
+      "team": "Hitmen",
+      "w": 7,
+      "l": 8,
       "t": 0,
-      "diff": -24,
-      "strk": "L1"
-    },
-    {
-      "rank": 17,
-      "team": "Balls & Dolls",
-      "w": 4,
-      "l": 10,
-      "t": 0,
-      "diff": -83,
+      "diff": -46,
       "strk": "L3"
     },
     {
-      "rank": 18,
+      "rank": 17,
       "team": "Bad Knees Bears",
-      "w": 2,
-      "l": 7,
+      "w": 3,
+      "l": 9,
       "t": 1,
-      "diff": -55,
-      "strk": "T1"
+      "diff": -90,
+      "strk": "L2"
+    },
+    {
+      "rank": 18,
+      "team": "Balls & Dolls",
+      "w": 4,
+      "l": 12,
+      "t": 0,
+      "diff": -114,
+      "strk": "L5"
     },
     {
       "rank": 19,
       "team": "Originals",
       "w": 3,
-      "l": 9,
+      "l": 10,
       "t": 0,
-      "diff": -60,
-      "strk": "L2"
+      "diff": -70,
+      "strk": "L3"
     },
     {
       "rank": 20,
-      "team": "Bandits",
+      "team": "Stanley Slammers",
       "w": 2,
-      "l": 10,
+      "l": 11,
       "t": 0,
-      "diff": -153,
-      "strk": "W1"
+      "diff": -177,
+      "strk": "L7"
     },
     {
       "rank": 21,
-      "team": "Stanley Slammers",
+      "team": "Bandits",
       "w": 2,
-      "l": 10,
+      "l": 12,
       "t": 0,
-      "diff": -157,
-      "strk": "L6"
+      "diff": -181,
+      "strk": "L2"
     },
     {
       "rank": 22,
       "team": "The Drivers",
       "w": 1,
-      "l": 9,
+      "l": 10,
       "t": 0,
-      "diff": -211,
-      "strk": "L7"
+      "diff": -234,
+      "strk": "L8"
     },
     {
       "rank": 23,
       "team": "The Splinters",
       "w": 1,
-      "l": 11,
+      "l": 13,
       "t": 0,
-      "diff": -170,
-      "strk": "L10"
+      "diff": -206,
+      "strk": "L12"
     },
     {
       "rank": 24,
       "team": "Fiery Beavers",
       "w": 0,
-      "l": 11,
+      "l": 12,
       "t": 0,
-      "diff": -193,
-      "strk": "L11"
+      "diff": -229,
+      "strk": "L12"
     }
   ],
   "leaders": {
@@ -506,7 +506,21 @@
       "rbi": 34,
       "r": 28,
       "avg": 0.833,
-      "ops": 2.16
+      "ops": 2.16,
+      "trend": [
+        1,
+        1,
+        0.923,
+        0.875,
+        0.864,
+        0.852,
+        0.867,
+        0.853,
+        0.85,
+        0.841,
+        0.837,
+        0.833
+      ]
     },
     {
       "name": "Greg",
@@ -517,7 +531,20 @@
       "rbi": 20,
       "r": 23,
       "avg": 0.814,
-      "ops": 2.062
+      "ops": 2.062,
+      "trend": [
+        1,
+        0.714,
+        0.818,
+        0.846,
+        0.842,
+        0.833,
+        0.846,
+        0.813,
+        0.794,
+        0.8,
+        0.814
+      ]
     },
     {
       "name": "Dillon",
@@ -528,7 +555,11 @@
       "rbi": 5,
       "r": 8,
       "avg": 0.8,
-      "ops": 2.118
+      "ops": 2.118,
+      "trend": [
+        0.75,
+        0.8
+      ]
     },
     {
       "name": "Erik",
@@ -539,7 +570,20 @@
       "rbi": 26,
       "r": 29,
       "avg": 0.784,
-      "ops": 1.764
+      "ops": 1.764,
+      "trend": [
+        0.8,
+        0.909,
+        0.923,
+        0.778,
+        0.833,
+        0.8,
+        0.771,
+        0.795,
+        0.791,
+        0.771,
+        0.784
+      ]
     },
     {
       "name": "Keith",
@@ -550,7 +594,12 @@
       "rbi": 9,
       "r": 7,
       "avg": 0.769,
-      "ops": 1.646
+      "ops": 1.646,
+      "trend": [
+        0,
+        0.714,
+        0.769
+      ]
     },
     {
       "name": "Trevor",
@@ -561,7 +610,11 @@
       "rbi": 5,
       "r": 3,
       "avg": 0.778,
-      "ops": 1.556
+      "ops": 1.556,
+      "trend": [
+        0.833,
+        0.778
+      ]
     },
     {
       "name": "Brandon",
@@ -572,7 +625,19 @@
       "rbi": 15,
       "r": 28,
       "avg": 0.756,
-      "ops": 1.931
+      "ops": 1.931,
+      "trend": [
+        1,
+        0.889,
+        0.846,
+        0.722,
+        0.667,
+        0.704,
+        0.69,
+        0.694,
+        0.711,
+        0.756
+      ]
     },
     {
       "name": "Melvin",
@@ -583,7 +648,12 @@
       "rbi": 4,
       "r": 4,
       "avg": 0.75,
-      "ops": 2
+      "ops": 2,
+      "trend": [
+        1,
+        0.833,
+        0.75
+      ]
     },
     {
       "name": "Brendan",
@@ -594,7 +664,19 @@
       "rbi": 16,
       "r": 23,
       "avg": 0.711,
-      "ops": 1.707
+      "ops": 1.707,
+      "trend": [
+        0.667,
+        0.8,
+        0.667,
+        0.684,
+        0.696,
+        0.741,
+        0.75,
+        0.743,
+        0.7,
+        0.711
+      ]
     },
     {
       "name": "Sean",
@@ -605,7 +687,18 @@
       "rbi": 15,
       "r": 12,
       "avg": 0.667,
-      "ops": 1.346
+      "ops": 1.346,
+      "trend": [
+        0.667,
+        0.5,
+        0.545,
+        0.643,
+        0.722,
+        0.714,
+        0.731,
+        0.7,
+        0.667
+      ]
     },
     {
       "name": "Mark",
@@ -616,7 +709,19 @@
       "rbi": 19,
       "r": 12,
       "avg": 0.667,
-      "ops": 1.496
+      "ops": 1.496,
+      "trend": [
+        1,
+        0.8,
+        0.846,
+        0.778,
+        0.7,
+        0.696,
+        0.68,
+        0.7,
+        0.676,
+        0.667
+      ]
     },
     {
       "name": "Ty",
@@ -627,7 +732,8 @@
       "rbi": 0,
       "r": 0,
       "avg": 0.667,
-      "ops": 1.667
+      "ops": 1.667,
+      "trend": []
     },
     {
       "name": "Vee",
@@ -638,7 +744,13 @@
       "rbi": 4,
       "r": 7,
       "avg": 0.563,
-      "ops": 1.167
+      "ops": 1.167,
+      "trend": [
+        0.333,
+        0.25,
+        0.3,
+        0.563
+      ]
     },
     {
       "name": "Sam",
@@ -649,7 +761,15 @@
       "rbi": 4,
       "r": 7,
       "avg": 0.609,
-      "ops": 1.48
+      "ops": 1.48,
+      "trend": [
+        0.25,
+        0.667,
+        0.583,
+        0.5,
+        0.579,
+        0.609
+      ]
     },
     {
       "name": "Alex P",
@@ -660,7 +780,16 @@
       "rbi": 8,
       "r": 6,
       "avg": 0.615,
-      "ops": 1.591
+      "ops": 1.591,
+      "trend": [
+        0,
+        0.2,
+        0.455,
+        0.5,
+        0.5,
+        0.591,
+        0.615
+      ]
     },
     {
       "name": "Diana",
@@ -671,7 +800,8 @@
       "rbi": 1,
       "r": 1,
       "avg": 0.6,
-      "ops": 1.2
+      "ops": 1.2,
+      "trend": []
     },
     {
       "name": "Alex N",
@@ -682,7 +812,20 @@
       "rbi": 16,
       "r": 17,
       "avg": 0.551,
-      "ops": 1.09
+      "ops": 1.09,
+      "trend": [
+        1,
+        0.889,
+        0.714,
+        0.684,
+        0.652,
+        0.577,
+        0.586,
+        0.594,
+        0.514,
+        0.558,
+        0.551
+      ]
     },
     {
       "name": "Dallas",
@@ -693,7 +836,13 @@
       "rbi": 1,
       "r": 5,
       "avg": 0.455,
-      "ops": 1.055
+      "ops": 1.055,
+      "trend": [
+        0.667,
+        0.8,
+        0.625,
+        0.455
+      ]
     },
     {
       "name": "Scotty",
@@ -704,7 +853,15 @@
       "rbi": 10,
       "r": 12,
       "avg": 0.429,
-      "ops": 1.029
+      "ops": 1.029,
+      "trend": [
+        0.286,
+        0.3,
+        0.267,
+        0.263,
+        0.318,
+        0.429
+      ]
     },
     {
       "name": "Katie",
@@ -715,7 +872,18 @@
       "rbi": 13,
       "r": 10,
       "avg": 0.439,
-      "ops": 0.929
+      "ops": 0.929,
+      "trend": [
+        0.5,
+        0.667,
+        0.625,
+        0.526,
+        0.522,
+        0.464,
+        0.406,
+        0.432,
+        0.439
+      ]
     },
     {
       "name": "Jordan",
@@ -726,7 +894,15 @@
       "rbi": 1,
       "r": 3,
       "avg": 0.286,
-      "ops": 0.769
+      "ops": 0.769,
+      "trend": [
+        0,
+        0,
+        0.167,
+        0.286,
+        0.222,
+        0.286
+      ]
     },
     {
       "name": "Julie",
@@ -737,7 +913,19 @@
       "rbi": 6,
       "r": 10,
       "avg": 0.275,
-      "ops": 0.601
+      "ops": 0.601,
+      "trend": [
+        0.75,
+        0.455,
+        0.467,
+        0.4,
+        0.364,
+        0.333,
+        0.321,
+        0.313,
+        0.289,
+        0.275
+      ]
     },
     {
       "name": "Brooklyn",
@@ -748,7 +936,16 @@
       "rbi": 2,
       "r": 2,
       "avg": 0.24,
-      "ops": 0.561
+      "ops": 0.561,
+      "trend": [
+        0.2,
+        0.273,
+        0.231,
+        0.263,
+        0.273,
+        0.261,
+        0.24
+      ]
     }
   ]
 }
