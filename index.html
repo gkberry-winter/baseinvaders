@@ -11,14 +11,14 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Base Invaders">
 <meta property="og:url" content="https://baseinvaderssoftball.netlify.app/">
-<meta property="og:title" content="Base Invaders — Won 2 Straight">
-<meta property="og:description" content="Next up: @ Walk off Warriors Fri, Jul 24 6:00 PM · NorthShore Slo-Pitch">
+<meta property="og:title" content="Base Invaders — 4–2 · #7 of 24">
+<meta property="og:description" content="NorthShore Slo-Pitch · Thunder Bay">
 <meta property="og:image" content="https://baseinvaderssoftball.netlify.app/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Base Invaders — Won 2 Straight">
-<meta name="twitter:description" content="Next up: @ Walk off Warriors Fri, Jul 24 6:00 PM · NorthShore Slo-Pitch">
+<meta name="twitter:title" content="Base Invaders — 4–2 · #7 of 24">
+<meta name="twitter:description" content="NorthShore Slo-Pitch · Thunder Bay">
 <meta name="twitter:image" content="https://baseinvaderssoftball.netlify.app/og-image.png">
 <!-- OG:END -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -177,6 +177,10 @@
   .card-x{position:absolute;top:9px;right:13px;font-family:var(--pixel);font-size:11px;color:var(--muted);cursor:pointer}
   .pc-head{text-align:center;border-bottom:1px dashed var(--line2);padding-bottom:14px;margin-bottom:14px}
   .pc-head svg{display:block;margin:0 auto}
+  .pc-trend{margin-bottom:14px;border-bottom:1px dashed var(--line2);padding-bottom:14px}
+  .pc-trend-label{font-family:var(--pixel);font-size:9px;color:var(--gold);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px}
+  .pc-trend-range{display:flex;justify-content:space-between;font-family:var(--mono);font-size:10px;color:var(--muted);margin-top:2px}
+  .pc-trend-range .hi{color:var(--gold);font-weight:600}
   .pc-name{font-family:var(--pixel);font-size:13px;color:var(--gold);margin-top:10px;line-height:1.4}
   .pc-line{font-family:var(--mono);font-size:13px;color:var(--muted);margin-top:8px}
   .pc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:14px}
@@ -479,6 +483,29 @@ function rankOf(players,key,name){
   const i=sorted.findIndex(x=>x.name===name);
   return i===-1?null:i+1;
 }
+// Small inline SVG trend line — same hand-drawn approach as the pixel mascot, no chart
+// library dependency. Returns "" when there's nothing meaningful to plot.
+function sparklineSVG(trend){
+  if(!trend||trend.length<2) return "";
+  const W=300,H=64,PAD=8,n=trend.length;
+  const min=Math.min(...trend),max=Math.max(...trend),range=(max-min)||0.001;
+  const pt=(v,i)=>{
+    const x=PAD+i*((W-2*PAD)/(n-1));
+    const y=(H-PAD)-((v-min)/range)*(H-2*PAD);
+    return x.toFixed(1)+","+y.toFixed(1);
+  };
+  const pts=trend.map(pt);
+  const [lastX,lastY]=pts[pts.length-1].split(",");
+  const fmt=v=>v.toFixed(3).replace(/^0/,"");
+  return `<div class="pc-trend">
+    <div class="pc-trend-label">Season AVG Trend</div>
+    <svg width="100%" height="${H}" viewBox="0 0 ${W} ${H}" aria-hidden="true">
+      <polyline points="${pts.join(" ")}" fill="none" stroke="var(--gold)" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+      <circle cx="${lastX}" cy="${lastY}" r="4" fill="var(--gold)"/>
+    </svg>
+    <div class="pc-trend-range"><span>${esc(fmt(trend[0]))}</span><span class="hi">${esc(fmt(trend[n-1]))}</span></div>
+  </div>`;
+}
 function openPlayerCard(name){
   const D=CURRENT; if(!D) return;
   const p=D.players.find(x=>x.name===name); if(!p) return;
@@ -499,6 +526,7 @@ function openPlayerCard(name){
       <div class="pc-name">${esc(p.name.toUpperCase())}</div>
       <div class="pc-line">${p.gp} GP &middot; ${avgS} AVG &middot; ${opsS} OPS</div>
     </div>
+    ${sparklineSVG(p.trend)}
     <div class="pc-grid">
       <div class="c"><div class="k">AB</div><div class="v">${p.ab}</div></div>
       <div class="c"><div class="k">H</div><div class="v">${p.h}</div></div>
