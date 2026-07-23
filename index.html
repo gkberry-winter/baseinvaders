@@ -11,14 +11,14 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Base Invaders">
 <meta property="og:url" content="https://baseinvaderssoftball.netlify.app/">
-<meta property="og:title" content="Base Invaders — Won 2 Straight">
-<meta property="og:description" content="Next up: @ Walk off Warriors Fri, Jul 24 6:00 PM · NorthShore Slo-Pitch">
+<meta property="og:title" content="Base Invaders — 4–2 · #7 of 24">
+<meta property="og:description" content="NorthShore Slo-Pitch · Thunder Bay">
 <meta property="og:image" content="https://baseinvaderssoftball.netlify.app/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Base Invaders — Won 2 Straight">
-<meta name="twitter:description" content="Next up: @ Walk off Warriors Fri, Jul 24 6:00 PM · NorthShore Slo-Pitch">
+<meta name="twitter:title" content="Base Invaders — 4–2 · #7 of 24">
+<meta name="twitter:description" content="NorthShore Slo-Pitch · Thunder Bay">
 <meta name="twitter:image" content="https://baseinvaderssoftball.netlify.app/og-image.png">
 <!-- OG:END -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -91,6 +91,9 @@
   tr.me td{background:rgba(245,197,24,.10)}
   tr.me td:first-child{box-shadow:inset 3px 0 0 var(--gold)}
   tr.me td.l{color:var(--gold);font-weight:600}
+  tr.side-row td{background:var(--panel2);font-family:var(--pixel);font-size:8px;letter-spacing:1px;
+    color:var(--gold);text-transform:uppercase;padding:7px 10px;border-bottom:1px solid var(--line2)}
+  tr.side-row.first td{border-top:none}
   .pos{color:var(--win)} .neg{color:var(--loss)}
   .strk-w{color:var(--win)} .strk-l{color:var(--loss)} .strk-t{color:var(--tie)}
 
@@ -147,6 +150,16 @@
 
   /* FEATURED RECAP */
   .recap-card{padding:18px 20px}
+  .box-score{margin-top:14px;overflow:hidden}
+  .box-score table{font-size:12px}
+  .box-score th{font-size:10px;color:var(--muted);padding:8px 6px;text-align:center;border-bottom:1px solid var(--line)}
+  .box-score th:first-child{text-align:left;padding-left:14px}
+  .box-score th.r{color:var(--gold);font-weight:bold;border-left:1px solid var(--line2)}
+  .box-score td{padding:8px 6px;text-align:center;border-bottom:none;font-family:var(--mono)}
+  .box-score td:first-child{text-align:left;padding-left:14px;font-family:var(--sans);font-weight:600;white-space:nowrap}
+  .box-score td.r{font-weight:bold;font-size:14px;border-left:1px solid var(--line2)}
+  .box-score td.empty{color:var(--dim)}
+  .box-score .bs-foot{padding:8px 14px 12px;font-size:11px;color:var(--dim)}
   .recap-top{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:12px}
   .recap-badge{font-family:var(--pixel);font-size:9px;padding:6px 9px;border-radius:5px}
   .recap-score{font-family:var(--mono);font-weight:700;font-size:30px}
@@ -169,6 +182,7 @@
   /* PLAYER CARD MODAL */
   tr.roster-row{cursor:pointer}
   tr.roster-row:hover td{background:rgba(255,255,255,.04)}
+  .flame{display:inline-block;vertical-align:-2px;margin-left:5px}
   .cardModal{position:fixed;inset:0;background:rgba(5,8,18,.80);display:flex;align-items:center;justify-content:center;
     padding:20px;z-index:50}
   .cardModal[hidden]{display:none}
@@ -223,6 +237,7 @@
   <section id="recapSec" hidden>
     <div class="sec-head"><h2>Last Game</h2></div>
     <div class="panel recap-card" id="recapCard"></div>
+    <div class="panel box-score" id="boxScore" hidden></div>
   </section>
 
   <section id="leadersSec">
@@ -405,6 +420,26 @@ function render(D){
     }).join("");
   } else fb.hidden=true;
 
+  /* Inning-by-inning box score — only ever shown when the generator has already
+     cross-checked it against the real score, so a missing/mismatched row just means
+     this panel stays hidden (same fail-quiet pattern as the trend sparkline). */
+  function renderBoxScore(bs){
+    const el=document.getElementById("boxScore");
+    if(!bs||!bs.ourInnings||!bs.theirInnings){ el.hidden=true; return; }
+    const n=Math.max(bs.ourInnings.length,bs.theirInnings.length);
+    const cell=v=>v==null?`<td class="empty">–</td>`:`<td>${v}</td>`;
+    let head=`<th></th>`;
+    for(let i=1;i<=n;i++) head+=`<th>${i}</th>`;
+    head+=`<th class="r">R</th>`;
+    const rowHtml=(label,inns,total,gold)=>
+      `<tr><td>${esc(label)}</td>${inns.map(cell).join("")}<td class="r"${gold?` style="color:var(--gold)"`:""}>${total}</td></tr>`;
+    el.innerHTML=`<table style="width:100%;border-collapse:collapse;"><thead><tr>${head}</tr></thead><tbody>`+
+      rowHtml("Invaders",bs.ourInnings,bs.ourTotal,false)+
+      rowHtml(esc(bs.opponent),bs.theirInnings,bs.theirTotal,bs.theirTotal>bs.ourTotal)+
+      `</tbody></table>`;
+    el.hidden=false;
+  }
+
   /* featured last-game recap */
   const lr=(D.results&&D.results.length)?D.results[D.results.length-1]:null;
   const recapSec=document.getElementById("recapSec");
@@ -418,7 +453,8 @@ function render(D){
         <span class="recap-meta"><div class="opp">${ha(lr.home)} ${esc(lr.opp)}</div><div class="date">${esc(lr.date)}</div></span>
       </div>
       ${String(D.recap).split(/\n\n+/).map(par=>`<p class="recap-text">${esc(par.replace(/\n/g," "))}</p>`).join("")}`;
-  } else recapSec.hidden=true;
+    renderBoxScore(D.boxScore);
+  } else { recapSec.hidden=true; renderBoxScore(null); }
 
   const ng=D.nextGame, ngEl=document.getElementById("nextgame");
   if(ng){ ngEl.hidden=false; ngEl.innerHTML=`
@@ -426,9 +462,17 @@ function render(D){
     <span class="matchup">${ha(ng.home)} ${esc(ng.opponent)}</span>
     <span class="det"><span class="num">${esc(ng.date)}</span>${ng.time?` · <span class="num">${esc(ng.time)}</span>`:""}${ng.park?` · ${esc(ng.park)}`:""}</span>`; }
 
-  /* standings */
+  /* standings — grouped into Side brackets of 6, with a divider row between groups */
   let s=`<thead><tr><th>#</th><th class="l">Team</th><th>W-L-T</th><th>Diff</th><th>Strk</th></tr></thead><tbody>`;
+  const ourSide=(D.standingsTable.find(x=>x.team===D.team)||{}).side;
+  let curSide=null, firstGroup=true;
   D.standingsTable.forEach(t=>{
+    if(t.side && t.side!==curSide){
+      curSide=t.side;
+      const mine=curSide===ourSide?" \u25c0 our side":"";
+      s+=`<tr class="side-row${firstGroup?" first":""}"><td colspan="5">${esc(curSide)} SIDE${mine}</td></tr>`;
+      firstGroup=false;
+    }
     const me=t.team===D.team?" class=\"me\"":"";
     const d=(t.diff>0?"+":"")+t.diff;
     s+=`<tr${me}><td class="rk">${t.rank}</td><td class="l">${esc(t.team)}</td>`+
@@ -463,7 +507,7 @@ function render(D){
   const ps=[...D.players].sort((a,b)=>(b.ops??-1)-(a.ops??-1));
   let r=`<thead><tr><th class="l">Player</th><th>GP</th><th>AB</th><th>H</th><th>HR</th><th>RBI</th><th>R</th><th>AVG</th><th>OPS</th></tr></thead><tbody>`;
   ps.forEach(p=>{
-    r+=`<tr class="roster-row" data-name="${esc(p.name)}"><td class="l">${esc(p.name)}</td><td class="tnum">${p.gp}</td><td class="tnum">${p.ab}</td>`+
+    r+=`<tr class="roster-row" data-name="${esc(p.name)}"><td class="l">${esc(p.name)}${flameIcon(p.streak)}</td><td class="tnum">${p.gp}</td><td class="tnum">${p.ab}</td>`+
        `<td class="tnum">${p.h}</td><td class="tnum">${p.hr}</td><td class="tnum">${p.rbi}</td><td class="tnum">${p.r}</td>`+
        `<td class="tnum">${fmtAvg(p.avg)}</td><td class="tnum">${p.ops==null?"—":p.ops.toFixed(3)}</td></tr>`;
   });
@@ -485,6 +529,16 @@ function rankOf(players,key,name){
 }
 // Small inline SVG trend line — same hand-drawn approach as the pixel mascot, no chart
 // library dependency. Returns "" when there's nothing meaningful to plot.
+// Small hand-drawn flame for hot-streak markers — same technique as the mascot and
+// sparkline (inline SVG, no external asset), warm orange so it never reads as "gold =
+// leader" from the High Scores cards. Only ever called for hit streaks (public, up-only).
+function flameIcon(count){
+  if(!count||count<3) return "";
+  return `<span class="flame" title="${count}-game hit streak">`+
+    `<svg width="13" height="13" viewBox="0 0 16 16" aria-hidden="true">`+
+    `<path d="M8 1c1 3-2 4-2 7a2 2 0 0 0 4 0c1 1 1 2.5 0 4a5 5 0 0 1-8-3c0-3 2-4 3-6 .5-1 .5-1.5 3-2z" `+
+    `fill="#ff8c42" stroke="#c65a1e" stroke-width="0.5"/></svg></span>`;
+}
 function sparklineSVG(trend){
   if(!trend||trend.length<2) return "";
   const W=300,H=64,PAD=8,n=trend.length;
