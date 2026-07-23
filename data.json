@@ -23,7 +23,34 @@
     "runs": 262
   },
   "recap": "The Base Invaders put together one of their most complete offensive performances of the season on Monday, July 20, rolling past the Drivers 31–8 behind a staggering 43 hits and contributions up and down the lineup. Vee was the standout of the night, going a perfect 6-for-6 with 4 RBI, while Jason added a 4-for-5 effort with 5 RBI to pace the attack. Sean chipped in 3-for-6 with 4 RBI, and Brendan went 4-for-5 with 3 RBI to keep the runs coming in waves. Greg rounded out the big nights with a clean 3-for-3 and 3 RBI, part of a relentless Invaders lineup that sent 11 players reaching base over the course of the game. The team also got a home run on the night, capping off an evening where almost nothing went wrong at the plate. Credit to the Drivers for battling through a tough night — the Invaders will look to carry this momentum forward.",
-  "boxScore": null,
+  "boxScore": {
+    "opponent": "The Drivers",
+    "ourInnings": [
+      7,
+      7,
+      6,
+      6,
+      null,
+      2,
+      3,
+      null,
+      null
+    ],
+    "theirInnings": [
+      3,
+      null,
+      null,
+      null,
+      1,
+      null,
+      4,
+      null,
+      null
+    ],
+    "ourTotal": 31,
+    "theirTotal": 8,
+    "result": "W"
+  },
   "nextGame": {
     "date": "Fri, Jul 24",
     "opponent": "Walk off Warriors",
