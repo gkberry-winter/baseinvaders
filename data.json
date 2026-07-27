@@ -1,6 +1,6 @@
 {
   "team": "Base Invaders",
-  "updated": "Jul 23, 2026",
+  "updated": "Jul 27, 2026",
   "leagueUrl": "https://northshoreunlimited.ca/standings/",
   "sheetUrl": "https://docs.google.com/spreadsheets/d/1GYBt5mEGkC8YAokzqvHLtemRHdrC714m1gaIqc4OXA4/edit",
   "record": {
@@ -52,9 +52,9 @@
     "result": "W"
   },
   "nextGame": {
-    "date": "Fri, Jul 24",
-    "opponent": "Walk off Warriors",
-    "home": false,
+    "date": "Tue, Jul 28",
+    "opponent": "Bad Knees Bears",
+    "home": true,
     "time": "6:00 PM",
     "park": "Delaney North"
   },
