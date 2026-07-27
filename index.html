@@ -11,14 +11,14 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Base Invaders">
 <meta property="og:url" content="https://baseinvaderssoftball.netlify.app/">
-<meta property="og:title" content="Base Invaders — Won 2 Straight">
-<meta property="og:description" content="Next up: vs Bad Knees Bears Tue, Jul 28 6:00 PM · NorthShore Slo-Pitch">
+<meta property="og:title" content="Base Invaders — 4–2 · #7 of 24">
+<meta property="og:description" content="NorthShore Slo-Pitch · Thunder Bay">
 <meta property="og:image" content="https://baseinvaderssoftball.netlify.app/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Base Invaders — Won 2 Straight">
-<meta name="twitter:description" content="Next up: vs Bad Knees Bears Tue, Jul 28 6:00 PM · NorthShore Slo-Pitch">
+<meta name="twitter:title" content="Base Invaders — 4–2 · #7 of 24">
+<meta name="twitter:description" content="NorthShore Slo-Pitch · Thunder Bay">
 <meta name="twitter:image" content="https://baseinvaderssoftball.netlify.app/og-image.png">
 <!-- OG:END -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -53,6 +53,8 @@
     text-shadow:3px 3px 0 var(--navy)}
   .teamname b{color:var(--gold);text-shadow:3px 3px 0 #5a4a06}
   .sub{font-family:var(--pixel);font-size:8px;letter-spacing:1px;color:var(--muted);margin-top:14px}
+  .champ-banner{display:block;width:100%;box-sizing:border-box;background:#f5c518;color:#3d2f00;font-family:var(--pixel);
+    font-size:8px;letter-spacing:1.5px;text-transform:uppercase;text-align:center;padding:8px 0;margin-top:14px}
 
   .scoreboard{display:flex;align-items:stretch;justify-content:center;gap:10px;margin:26px auto 6px;flex-wrap:wrap}
   .sb-card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 18px;min-width:96px}
@@ -225,6 +227,7 @@
   <svg class="invader" id="bigInvader" width="72" height="52" aria-label="Base Invaders"></svg>
   <div class="teamname">BASE&nbsp;<b>INVADERS</b></div>
   <div class="sub">NorthShore Slo-Pitch · Thunder Bay</div>
+  <div class="champ-banner" id="champBanner" hidden></div>
 
   <div class="scoreboard" id="scoreboard"></div>
   <div class="statstrip" id="teamBatting"></div>
@@ -393,6 +396,12 @@ function render(D){
   invaderSVG(document.getElementById("bigInvader"),"#f5c518",6);
   document.getElementById("marchers").innerHTML =
     [..."0000"].map(()=>miniInvader("#3a4a6b")).join("");
+
+  const champEl=document.getElementById("champBanner");
+  if(D.champion&&D.champion.label){
+    champEl.textContent=D.champion.label;
+    champEl.hidden=false;
+  } else champEl.hidden=true;
 
   const rec=D.record, st=D.standing;
   document.getElementById("scoreboard").innerHTML=`
