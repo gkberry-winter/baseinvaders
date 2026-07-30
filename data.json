@@ -1,6 +1,6 @@
 {
   "team": "Base Invaders",
-  "updated": "Jul 29, 2026",
+  "updated": "Jul 30, 2026",
   "leagueUrl": "https://northshoreunlimited.ca/standings/",
   "sheetUrl": "https://docs.google.com/spreadsheets/d/1GYBt5mEGkC8YAokzqvHLtemRHdrC714m1gaIqc4OXA4/edit",
   "record": {
@@ -29,11 +29,11 @@
     "label": "C-Side Champions"
   },
   "nextGame": {
-    "date": "Wed, Jul 29",
-    "opponent": "Michieli Hitmen",
-    "home": true,
-    "time": "6:00 PM",
-    "park": "North End"
+    "date": "Tue, Aug 4",
+    "opponent": "Fiery Beavers",
+    "home": false,
+    "time": "7:30 PM",
+    "park": "Delaney North"
   },
   "results": [
     {
