@@ -1,13 +1,13 @@
 {
   "team": "Base Invaders",
-  "updated": "Aug 18, 2026",
+  "updated": "Aug 19, 2026",
   "leagueUrl": "https://northshoreunlimited.ca/standings/",
   "sheetUrl": "https://docs.google.com/spreadsheets/d/1GYBt5mEGkC8YAokzqvHLtemRHdrC714m1gaIqc4OXA4/edit",
   "record": {
-    "w": 12,
+    "w": 13,
     "l": 8,
     "t": 0,
-    "winPct": 0.6
+    "winPct": 0.6190476190476191
   },
   "standing": {
     "rank": 8,
@@ -17,38 +17,38 @@
     "streak": "W2"
   },
   "teamBatting": {
-    "avg": 0.628,
-    "ops": 1.516,
-    "hr": 30,
-    "runs": 416
+    "avg": 0.629,
+    "ops": 1.522,
+    "hr": 32,
+    "runs": 436
   },
-  "recap": "The Base Invaders outlasted the Marinaders 30–25 on Monday, August 17, in a slugfest that saw both offenses swinging hot bats all game long. The Invaders piled up 38 hits and got 11 different players on base, with the bats simply outpacing the Marinaders down the stretch for the 5-run win. Jason had a night to remember, going a perfect 6-for-6 with 4 RBI and 2 home runs, while Brendan backed him up with a 4-for-4 performance of his own, adding 4 RBI and a homer. Dillon stayed hot all game at 5-for-5 with 3 RBI, and Trevor chipped in at 4-for-5 with 3 RBI, while Brandon drove in 4 runs on a 3-for-4 day. With this much offense up and down the lineup, the Invaders had enough cushion to hold on despite a high-scoring push from the Marinaders, closing out a wild, well-earned win.",
+  "recap": "The Base Invaders outlasted Bases Loaded 20–15 on Tuesday, August 18, in a slugfest that lived up to both team names. The offense was relentless all night, piling up 25 hits with 11 different players reaching base, and the Invaders' bats simply had the answer every time Bases Loaded threatened to close the gap. Jason powered the attack, going 3-for-3 with a home run and 3 RBI, while Brandon matched him with a 3-for-4 night that included his own long ball and an RBI. Erik chipped in 3-for-5, and Alex N (2-for-3) and Brendan (2-for-2) kept the lineup humming with quality at-bats up and down the card. With this much offense clicking at once, the final margin felt earned rather than lucky, and it added up to a satisfying five-run win.",
   "boxScore": {
-    "opponent": "@ Marinaders",
+    "opponent": "Bases Loaded",
     "ourInnings": [
-      6,
-      6,
-      6,
-      3,
-      6,
+      2,
+      1,
       0,
-      3,
+      5,
+      null,
+      8,
+      4,
       null,
       null
     ],
     "theirInnings": [
       3,
-      4,
-      4,
-      5,
       0,
       1,
-      8,
+      4,
+      0,
+      5,
+      2,
       null,
       null
     ],
-    "ourTotal": 30,
-    "theirTotal": 25,
+    "ourTotal": 20,
+    "theirTotal": 15,
     "result": "W"
   },
   "champion": {
@@ -56,10 +56,10 @@
     "label": "C-Side Champions"
   },
   "nextGame": {
-    "date": "Tue, Aug 18",
-    "opponent": "Bases Loaded",
-    "home": true,
-    "time": "7:30 PM",
+    "date": "Fri, Aug 21",
+    "opponent": "Chickadees",
+    "home": false,
+    "time": "6:00 PM",
     "park": "North End"
   },
   "results": [
@@ -222,14 +222,17 @@
       "us": 30,
       "them": 25,
       "res": "W"
-    }
-  ],
-  "schedule": [
+    },
     {
       "date": "Aug 18",
       "opp": "Bases Loaded",
-      "home": true
-    },
+      "home": true,
+      "us": 20,
+      "them": 15,
+      "res": "W"
+    }
+  ],
+  "schedule": [
     {
       "date": "Aug 26",
       "opp": "Expos",
@@ -487,29 +490,29 @@
     "AVG": [
       [
         "Jason",
-        ".862"
+        ".867"
       ],
       [
         "Trevor",
-        ".789"
+        ".773"
       ],
       [
         "Diana",
         ".773"
       ],
       [
-        "Brandon",
-        ".758"
+        "Brendan",
+        ".761"
       ],
       [
-        "Brendan",
-        ".754"
+        "Brandon",
+        ".758"
       ]
     ],
     "OPS": [
       [
         "Jason",
-        "2.423"
+        "2.444"
       ],
       [
         "Shane",
@@ -517,21 +520,21 @@
       ],
       [
         "Brendan",
-        "1.956"
+        "1.971"
       ],
       [
         "Dillon",
         "1.946"
       ],
       [
-        "Greg",
-        "1.926"
+        "Brandon",
+        "1.917"
       ]
     ],
     "RBI": [
       [
         "Jason",
-        "65"
+        "68"
       ],
       [
         "Erik",
@@ -553,37 +556,37 @@
     "Hits": [
       [
         "Jason",
-        "75"
+        "78"
       ],
       [
         "Erik",
-        "58"
+        "61"
       ],
       [
         "Brendan",
-        "52"
+        "54"
       ],
       [
         "Brandon",
-        "47"
+        "50"
       ],
       [
         "Greg",
-        "46"
+        "48"
       ]
     ]
   },
   "players": [
     {
       "name": "Jason",
-      "gp": 18,
-      "ab": 87,
-      "h": 75,
-      "hr": 10,
-      "rbi": 65,
-      "r": 52,
-      "avg": 0.862,
-      "ops": 2.423,
+      "gp": 19,
+      "ab": 90,
+      "h": 78,
+      "hr": 11,
+      "rbi": 68,
+      "r": 56,
+      "avg": 0.867,
+      "ops": 2.444,
       "trend": [
         1,
         1,
@@ -602,44 +605,29 @@
         0.859,
         0.857,
         0.852,
-        0.862
+        0.862,
+        0.867
       ],
-      "streak": 18
-    },
-    {
-      "name": "Kole",
-      "gp": 3,
-      "ab": 4,
-      "h": 3,
-      "hr": 0,
-      "rbi": 1,
-      "r": 5,
-      "avg": 0.75,
-      "ops": 1.357,
-      "trend": [
-        1,
-        0.667,
-        0.75
-      ],
-      "streak": 3
+      "streak": 19
     },
     {
       "name": "Trevor",
-      "gp": 4,
-      "ab": 19,
-      "h": 15,
+      "gp": 5,
+      "ab": 22,
+      "h": 17,
       "hr": 0,
       "rbi": 13,
-      "r": 9,
-      "avg": 0.789,
-      "ops": 1.632,
+      "r": 10,
+      "avg": 0.773,
+      "ops": 1.591,
       "trend": [
         0.833,
         0.778,
         0.786,
-        0.789
+        0.789,
+        0.773
       ],
-      "streak": 4
+      "streak": 5
     },
     {
       "name": "Diana",
@@ -661,15 +649,46 @@
       "streak": 5
     },
     {
+      "name": "Brendan",
+      "gp": 17,
+      "ab": 71,
+      "h": 54,
+      "hr": 3,
+      "rbi": 30,
+      "r": 39,
+      "avg": 0.761,
+      "ops": 1.971,
+      "trend": [
+        0.667,
+        0.8,
+        0.667,
+        0.684,
+        0.696,
+        0.741,
+        0.75,
+        0.743,
+        0.7,
+        0.711,
+        0.725,
+        0.696,
+        0.712,
+        0.73,
+        0.738,
+        0.754,
+        0.761
+      ],
+      "streak": 17
+    },
+    {
       "name": "Brandon",
-      "gp": 14,
-      "ab": 62,
-      "h": 47,
-      "hr": 2,
-      "rbi": 21,
-      "r": 38,
+      "gp": 15,
+      "ab": 66,
+      "h": 50,
+      "hr": 3,
+      "rbi": 22,
+      "r": 41,
       "avg": 0.758,
-      "ops": 1.879,
+      "ops": 1.917,
       "trend": [
         1,
         0.889,
@@ -684,9 +703,27 @@
         0.74,
         0.736,
         0.759,
+        0.758,
         0.758
       ],
-      "streak": 14
+      "streak": 15
+    },
+    {
+      "name": "Kole",
+      "gp": 3,
+      "ab": 4,
+      "h": 3,
+      "hr": 0,
+      "rbi": 1,
+      "r": 5,
+      "avg": 0.75,
+      "ops": 1.357,
+      "trend": [
+        1,
+        0.667,
+        0.75
+      ],
+      "streak": 3
     },
     {
       "name": "Sean",
@@ -715,6 +752,36 @@
       "streak": 12
     },
     {
+      "name": "Greg",
+      "gp": 16,
+      "ab": 65,
+      "h": 48,
+      "hr": 4,
+      "rbi": 30,
+      "r": 33,
+      "avg": 0.738,
+      "ops": 1.914,
+      "trend": [
+        1,
+        0.714,
+        0.818,
+        0.846,
+        0.842,
+        0.833,
+        0.846,
+        0.813,
+        0.794,
+        0.8,
+        0.814,
+        0.787,
+        0.792,
+        0.759,
+        0.742,
+        0.738
+      ],
+      "streak": 16
+    },
+    {
       "name": "Dillon",
       "gp": 9,
       "ab": 34,
@@ -738,74 +805,15 @@
       "streak": 9
     },
     {
-      "name": "Brendan",
-      "gp": 16,
-      "ab": 69,
-      "h": 52,
-      "hr": 3,
-      "rbi": 30,
-      "r": 37,
-      "avg": 0.754,
-      "ops": 1.956,
-      "trend": [
-        0.667,
-        0.8,
-        0.667,
-        0.684,
-        0.696,
-        0.741,
-        0.75,
-        0.743,
-        0.7,
-        0.711,
-        0.725,
-        0.696,
-        0.712,
-        0.73,
-        0.738,
-        0.754
-      ],
-      "streak": 16
-    },
-    {
-      "name": "Greg",
-      "gp": 15,
-      "ab": 62,
-      "h": 46,
-      "hr": 4,
-      "rbi": 30,
-      "r": 32,
-      "avg": 0.742,
-      "ops": 1.926,
-      "trend": [
-        1,
-        0.714,
-        0.818,
-        0.846,
-        0.842,
-        0.833,
-        0.846,
-        0.813,
-        0.794,
-        0.8,
-        0.814,
-        0.787,
-        0.792,
-        0.759,
-        0.742
-      ],
-      "streak": 15
-    },
-    {
       "name": "Erik",
-      "gp": 17,
-      "ab": 80,
-      "h": 58,
+      "gp": 18,
+      "ab": 85,
+      "h": 61,
       "hr": 3,
       "rbi": 44,
-      "r": 47,
-      "avg": 0.725,
-      "ops": 1.762,
+      "r": 49,
+      "avg": 0.718,
+      "ops": 1.765,
       "trend": [
         0.8,
         0.909,
@@ -823,9 +831,10 @@
         0.721,
         0.73,
         0.733,
-        0.725
+        0.725,
+        0.718
       ],
-      "streak": 17
+      "streak": 18
     },
     {
       "name": "Melvin",
@@ -900,24 +909,6 @@
       "streak": 0
     },
     {
-      "name": "Keith",
-      "gp": 4,
-      "ab": 18,
-      "h": 11,
-      "hr": 0,
-      "rbi": 10,
-      "r": 7,
-      "avg": 0.611,
-      "ops": 1.317,
-      "trend": [
-        0,
-        0.714,
-        0.769,
-        0.611
-      ],
-      "streak": 3
-    },
-    {
       "name": "Alex P",
       "gp": 8,
       "ab": 29,
@@ -940,56 +931,51 @@
       "streak": 7
     },
     {
-      "name": "Scooter",
-      "gp": 3,
-      "ab": 12,
-      "h": 7,
-      "hr": 1,
-      "rbi": 6,
+      "name": "Keith",
+      "gp": 4,
+      "ab": 18,
+      "h": 11,
+      "hr": 0,
+      "rbi": 10,
       "r": 7,
-      "avg": 0.583,
-      "ops": 1.532,
+      "avg": 0.611,
+      "ops": 1.317,
       "trend": [
-        0.5,
-        0.571,
-        0.583
+        0,
+        0.714,
+        0.769,
+        0.611
       ],
       "streak": 3
     },
     {
-      "name": "Scotty",
-      "gp": 11,
-      "ab": 44,
-      "h": 23,
-      "hr": 0,
-      "rbi": 19,
-      "r": 16,
-      "avg": 0.523,
-      "ops": 1.21,
+      "name": "Scooter",
+      "gp": 4,
+      "ab": 15,
+      "h": 9,
+      "hr": 1,
+      "rbi": 6,
+      "r": 7,
+      "avg": 0.6,
+      "ops": 1.492,
       "trend": [
-        0.286,
-        0.3,
-        0.267,
-        0.263,
-        0.318,
-        0.429,
-        0.485,
-        0.526,
         0.5,
-        0.523
+        0.571,
+        0.583,
+        0.6
       ],
-      "streak": 10
+      "streak": 4
     },
     {
       "name": "Alex N",
-      "gp": 13,
-      "ab": 57,
-      "h": 30,
+      "gp": 14,
+      "ab": 60,
+      "h": 32,
       "hr": 0,
       "rbi": 18,
-      "r": 21,
-      "avg": 0.526,
-      "ops": 1.082,
+      "r": 23,
+      "avg": 0.533,
+      "ops": 1.106,
       "trend": [
         1,
         0.889,
@@ -1003,9 +989,35 @@
         0.558,
         0.551,
         0.558,
-        0.526
+        0.526,
+        0.533
       ],
-      "streak": 4
+      "streak": 5
+    },
+    {
+      "name": "Scotty",
+      "gp": 12,
+      "ab": 48,
+      "h": 25,
+      "hr": 0,
+      "rbi": 19,
+      "r": 17,
+      "avg": 0.521,
+      "ops": 1.201,
+      "trend": [
+        0.286,
+        0.3,
+        0.267,
+        0.263,
+        0.318,
+        0.429,
+        0.485,
+        0.526,
+        0.5,
+        0.523,
+        0.521
+      ],
+      "streak": 11
     },
     {
       "name": "Sam",
@@ -1031,24 +1043,35 @@
       "streak": 0
     },
     {
-      "name": "Dallas",
-      "gp": 6,
-      "ab": 18,
-      "h": 7,
+      "name": "Katie",
+      "gp": 17,
+      "ab": 77,
+      "h": 35,
       "hr": 0,
-      "rbi": 1,
-      "r": 8,
-      "avg": 0.389,
-      "ops": 0.931,
+      "rbi": 16,
+      "r": 19,
+      "avg": 0.455,
+      "ops": 1.007,
       "trend": [
+        0.5,
         0.667,
-        0.8,
         0.625,
-        0.455,
-        0.4,
-        0.389
+        0.526,
+        0.522,
+        0.464,
+        0.406,
+        0.432,
+        0.439,
+        0.426,
+        0.442,
+        0.436,
+        0.433,
+        0.429,
+        0.433,
+        0.458,
+        0.455
       ],
-      "streak": 0
+      "streak": 10
     },
     {
       "name": "Vee",
@@ -1072,34 +1095,54 @@
       "streak": 7
     },
     {
-      "name": "Katie",
-      "gp": 16,
-      "ab": 72,
-      "h": 33,
+      "name": "Dallas",
+      "gp": 6,
+      "ab": 18,
+      "h": 7,
       "hr": 0,
-      "rbi": 16,
-      "r": 17,
-      "avg": 0.458,
-      "ops": 1.022,
+      "rbi": 1,
+      "r": 8,
+      "avg": 0.389,
+      "ops": 0.931,
       "trend": [
-        0.5,
         0.667,
+        0.8,
         0.625,
-        0.526,
-        0.522,
-        0.464,
-        0.406,
-        0.432,
-        0.439,
-        0.426,
-        0.442,
-        0.436,
-        0.433,
-        0.429,
-        0.433,
-        0.458
+        0.455,
+        0.4,
+        0.389
       ],
-      "streak": 9
+      "streak": 0
+    },
+    {
+      "name": "Julie",
+      "gp": 17,
+      "ab": 59,
+      "h": 20,
+      "hr": 0,
+      "rbi": 10,
+      "r": 18,
+      "avg": 0.339,
+      "ops": 0.739,
+      "trend": [
+        0.75,
+        0.455,
+        0.467,
+        0.4,
+        0.364,
+        0.333,
+        0.321,
+        0.313,
+        0.289,
+        0.275,
+        0.262,
+        0.267,
+        0.277,
+        0.275,
+        0.321,
+        0.339
+      ],
+      "streak": 5
     },
     {
       "name": "Jordan",
@@ -1120,35 +1163,6 @@
         0.286
       ],
       "streak": 0
-    },
-    {
-      "name": "Julie",
-      "gp": 16,
-      "ab": 56,
-      "h": 18,
-      "hr": 0,
-      "rbi": 10,
-      "r": 17,
-      "avg": 0.321,
-      "ops": 0.709,
-      "trend": [
-        0.75,
-        0.455,
-        0.467,
-        0.4,
-        0.364,
-        0.333,
-        0.321,
-        0.313,
-        0.289,
-        0.275,
-        0.262,
-        0.267,
-        0.277,
-        0.275,
-        0.321
-      ],
-      "streak": 4
     },
     {
       "name": "Brooklyn",
